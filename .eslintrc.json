@@ -1,0 +1,24 @@
+{
+  "rules": {},
+  "env": {
+    "es6": true,
+    "browser": true,
+    "amd": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2015,
+    "sourceType": "module"
+  },
+  "extends": "eslint:recommended",
+  "globals": {
+    "$": true,
+    "Atomics": "readonly",
+    "jquery": true,
+    "lazysizes": true,
+    "flatpickr": true,
+    "Cypress": true,
+    "cy": true,
+    "SharedArrayBuffer": "readonly"
+  }
+}
