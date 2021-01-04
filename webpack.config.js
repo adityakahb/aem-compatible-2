@@ -16,13 +16,13 @@ const prodExtraFiles = new RegExp(/(\.css\.js|\.css\.js\.map|\.js\.map|\.css\.ma
 
 module.exports = (env, argv) => {
   return {
-    entry: glob.sync(`{./src/templates/**/head-scripts.es.js,./src/templates/**/index.es.js,./src/templates/**/*.scss}`).reduce((x, y) => {
+    entry: glob.sync(`{./src/templates/**/head-scripts.es.js,./src/templates/**/index.es.js,./less/framework.less}`).reduce((x, y) => {
       return path.basename(y).indexOf('head-scripts.es') < 0 ? Object.assign(x, { [removeFilePart(y) + '/index']: y }) : Object.assign(x, {[removeFilePart(y) + '/head-scripts']: y})
     }, {}),
     output: {
       path: path.resolve(__dirname),
       filename: (pathData) => {
-        return pathData.chunk.name.indexOf('/styles/') < 0 ? '[name].js' : '[name].css.js';
+        return pathData.chunk.name.indexOf('/less/') < 0 ? '[name].js' : '[name].css.js';
       }
     },
     target: ['web', 'es5'],
