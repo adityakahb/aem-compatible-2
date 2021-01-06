@@ -10,19 +10,19 @@ const webpack = require('webpack');
 const devExtraFiles = new RegExp(/(\.css\.js|\.css\.js\.map)$/, 'm');
 const prodExtraFiles = new RegExp(/(\.css\.js|\.css\.js\.map|\.js\.map|\.css\.map)$/, 'm');
 
-// console.log(glob.sync(`{./src/templates/**/head-scripts.es.js,./src/templates/**/index.es.js,./src/templates/**/*.scss}`).reduce((x, y) => {
+// console.log(glob.sync(`{./templates/**/head-scripts.es.js,./templates/**/index.es.js,./templates/**/*.scss}`).reduce((x, y) => {
 //   return path.basename(y).indexOf('head-scripts.es') < 0 ? Object.assign(x, { [removeFilePart(y) + '/index']: y }) : Object.assign(x, {[removeFilePart(y) + '/head-scripts']: y})
 // }, {}));
 
 module.exports = (env, argv) => {
   return {
-    entry: glob.sync(`{./src/templates/**/head-scripts.es.js,./src/templates/**/index.es.js,./less/framework.less}`).reduce((x, y) => {
+    entry: glob.sync(`{./templates/**/head-scripts.es.js,./templates/**/index.es.js,./templates/**/*.less}`).reduce((x, y) => {
       return path.basename(y).indexOf('head-scripts.es') < 0 ? Object.assign(x, { [removeFilePart(y) + '/index']: y }) : Object.assign(x, {[removeFilePart(y) + '/head-scripts']: y})
     }, {}),
     output: {
       path: path.resolve(__dirname),
       filename: (pathData) => {
-        return pathData.chunk.name.indexOf('/less/') < 0 ? '[name].js' : '[name].css.js';
+        return pathData.chunk.name.indexOf('/styles/') < 0 ? '[name].js' : '[name].css.js';
       }
     },
     target: ['web', 'es5'],
@@ -45,7 +45,7 @@ module.exports = (env, argv) => {
               loader: 'file-loader',
               options: {
                 name: '[name].[ext]',
-                outputPath: './src/assets/webfonts',
+                outputPath: './assets/webfonts',
                 publicPath: '../../../../assets/webfonts'
               }
             }
@@ -65,7 +65,10 @@ module.exports = (env, argv) => {
             {
               loader: 'less-loader',
               options: {
-                sourceMap: true
+                sourceMap: true,
+                lessOptions: {
+                  strictMath: false,
+                },
               }
             },
           ]
@@ -101,7 +104,7 @@ module.exports = (env, argv) => {
         },
         after: {
           test: [{
-            folder: './src/templates',
+            folder: './templates',
             method: (absoluteItemPath) => {
               return argv.mode === 'development' ? devExtraFiles.test(absoluteItemPath) : prodExtraFiles.test(absoluteItemPath)
             },

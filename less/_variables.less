@@ -1,0 +1,102 @@
+@root-font-size: 16;
+
+@em: @root-font-size*1em;
+@rem: @root-font-size*1rem;
+
+@grays: {
+  gray0: #fff;
+  gray100: #f8f9fa;
+  gray200: #e9ecef;
+  gray300: #dee2e6;
+  gray400: #ced4da;
+  gray500: #adb5bd;
+  gray600: #6c757d;
+  gray700: #495057;
+  gray800: #343a40;
+  gray900: #212529;
+  gray1000: #000;
+};
+
+// @colors: {
+//   primary: @blue;
+//   secondary: @grays[gray600];
+//   success: @green;
+//   info: @cyan;
+//   warning: @yellow;
+//   danger: @red;
+//   light: @grays[gray100];
+//   dark: @grays[gray900];
+//   white: @grays[gray0];
+//   black: @grays[gray1000];
+// };
+
+@colors: {
+  primary: #205d86;
+  secondary: #77448b;
+  success: #20603c;
+  info: #3a539b;
+  warning: #804600;
+  danger: #b11030;
+  light: #fcddc9;
+  dark: #34515e;
+  white: @grays[gray0];
+  black: @grays[gray1000];
+};
+
+
+@breakpoints: {
+  xs: 0/@em;
+  sm: 576/@em;
+  md: 768/@em;
+  lg: 992/@em;
+  xl: 1200/@em;
+  xxl: 1392/@em;
+};
+
+@grid-columns: 12;
+@grid-gutter-width: 32/@rem;
+@grid-row-columns: 6;
+
+@spacer: 16/@rem;
+@spacers: {
+  0: 0;
+  1: @spacer / 4;
+  2: @spacer / 2;
+  3: @spacer;
+  4: @spacer * 2;
+  5: @spacer * 4;
+  6: @spacer * 6;
+};
+
+@theme-light-color: @grays[gray100];
+@theme-light-backgroundcolor: @grays[gray900];
+@theme-dark-color: @grays[gray900];
+@theme-dark-backgroundcolor: @grays[gray100];
+
+@link-decoration: underline;
+@enable-button-pointers: true;
+@is-link-decoration-none: boolean(@link-decoration = none);
+
+@line-height-base: 1.5;
+@line-height-sm: 1.25;
+@line-height-lg: 2;
+
+@font-weight-light: 300;
+@font-weight-normal: 400;
+@font-weight-bold: 700;
+
+@font-size-base: @root-font-size/@rem;
+@font-size-sm: @font-size-base * .875;
+@font-size-lg: @font-size-base * 1.25;
+
+@input-btn-font-family: null;
+@input-btn-font-size: @font-size-base;
+@input-btn-line-height: @line-height-base;
+
+/* ==buttons== */
+@btn-border-width: 1/@rem;
+@btn-white-space: null;
+@btn-font-family: @input-btn-font-family;
+@btn-font-size: @input-btn-font-size;
+@btn-line-height: @input-btn-line-height;
+@btn-font-weight: @font-weight-normal;
