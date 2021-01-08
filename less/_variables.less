@@ -1,6 +1,5 @@
 @root-font-size: 16;
 
-@em: @root-font-size*1em;
 @rem: @root-font-size*1rem;
 
 @grays: {
@@ -45,19 +44,19 @@
 
 
 @breakpoints: {
-  xs: 0/@em;
-  sm: 576/@em;
-  md: 768/@em;
-  lg: 992/@em;
-  xl: 1200/@em;
-  xxl: 1392/@em;
+  xs: (0 / @em);
+  sm: (576 / @em);
+  md: (768 /@em);
+  lg: (992 / @em);
+  xl: (1200 / @em);
+  xxl: (1392 / @em);
 };
 
 @grid-columns: 12;
-@grid-gutter-width: 32/@rem;
+@grid-gutter-width: (32 / @rem);
 @grid-row-columns: 6;
 
-@spacer: 16/@rem;
+@spacer: (16 / @rem);
 @spacers: {
   0: 0;
   1: @spacer / 4;
@@ -85,7 +84,7 @@
 @font-weight-normal: 400;
 @font-weight-bold: 700;
 
-@font-size-base: @root-font-size/@rem;
+@font-size-base: (@root-font-size / @rem);
 @font-size-sm: @font-size-base * .875;
 @font-size-lg: @font-size-base * 1.25;
 
@@ -94,8 +93,8 @@
 @input-btn-line-height: @line-height-base;
 
 /* ==buttons== */
-@btn-border-width: 1/@rem;
-@btn-white-space: null;
+@btn-border-width: (1 / @rem);
+@btn-white-space: none;
 @btn-font-family: @input-btn-font-family;
 @btn-font-size: @input-btn-font-size;
 @btn-line-height: @input-btn-line-height;

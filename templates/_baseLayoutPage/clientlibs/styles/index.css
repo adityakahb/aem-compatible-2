@@ -305,7 +305,7 @@ template {
 }
 .button {
   background-color: transparent;
-  border: 1/16rem solid transparent;
+  border: 0.0625rem solid transparent;
   color: #212529;
   cursor: pointer;
   display: inline-block;
@@ -316,87 +316,87 @@ template {
   text-decoration: none;
   user-select: none;
   vertical-align: middle;
-  white-space: null;
+  white-space: none;
 }
 .button-primary {
   background-color: #205d86;
-  border: 1/16rem solid #205d86;
+  border: 0.0625rem solid #205d86;
 }
 .button-secondary {
   background-color: #77448b;
-  border: 1/16rem solid #77448b;
+  border: 0.0625rem solid #77448b;
 }
 .button-success {
   background-color: #20603c;
-  border: 1/16rem solid #20603c;
+  border: 0.0625rem solid #20603c;
 }
 .button-info {
   background-color: #3a539b;
-  border: 1/16rem solid #3a539b;
+  border: 0.0625rem solid #3a539b;
 }
 .button-warning {
   background-color: #804600;
-  border: 1/16rem solid #804600;
+  border: 0.0625rem solid #804600;
 }
 .button-danger {
   background-color: #b11030;
-  border: 1/16rem solid #b11030;
+  border: 0.0625rem solid #b11030;
 }
 .button-light {
   background-color: #fcddc9;
-  border: 1/16rem solid #fcddc9;
+  border: 0.0625rem solid #fcddc9;
 }
 .button-dark {
   background-color: #34515e;
-  border: 1/16rem solid #34515e;
+  border: 0.0625rem solid #34515e;
 }
 .button-white {
   background-color: #fff;
-  border: 1/16rem solid #fff;
+  border: 0.0625rem solid #fff;
 }
 .button-black {
   background-color: #000;
-  border: 1/16rem solid #000;
+  border: 0.0625rem solid #000;
 }
 [data-theme="dark"] .button-primary {
   background-color: #205d86;
-  border: 1/16rem solid #205d86;
+  border: 0.0625rem solid #205d86;
 }
 [data-theme="dark"] .button-secondary {
   background-color: #77448b;
-  border: 1/16rem solid #77448b;
+  border: 0.0625rem solid #77448b;
 }
 [data-theme="dark"] .button-success {
   background-color: #20603c;
-  border: 1/16rem solid #20603c;
+  border: 0.0625rem solid #20603c;
 }
 [data-theme="dark"] .button-info {
   background-color: #3a539b;
-  border: 1/16rem solid #3a539b;
+  border: 0.0625rem solid #3a539b;
 }
 [data-theme="dark"] .button-warning {
   background-color: #804600;
-  border: 1/16rem solid #804600;
+  border: 0.0625rem solid #804600;
 }
 [data-theme="dark"] .button-danger {
   background-color: #b11030;
-  border: 1/16rem solid #b11030;
+  border: 0.0625rem solid #b11030;
 }
 [data-theme="dark"] .button-light {
   background-color: #fcddc9;
-  border: 1/16rem solid #fcddc9;
+  border: 0.0625rem solid #fcddc9;
 }
 [data-theme="dark"] .button-dark {
   background-color: #34515e;
-  border: 1/16rem solid #34515e;
+  border: 0.0625rem solid #34515e;
 }
 [data-theme="dark"] .button-white {
   background-color: #fff;
-  border: 1/16rem solid #fff;
+  border: 0.0625rem solid #fff;
 }
 [data-theme="dark"] .button-black {
   background-color: #000;
-  border: 1/16rem solid #000;
+  border: 0.0625rem solid #000;
 }
 
 

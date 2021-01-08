@@ -17,7 +17,7 @@ each(@colors, {
   .@{clsName_button}-@{key} {
     // @{key}-@{index}: @value;
     background-color: @value;
-    border: 1/@rem solid @value;
+    border: (1 / @rem) solid @value;
   }
 });
 [data-theme="dark"] {
@@ -25,7 +25,7 @@ each(@colors, {
     .@{clsName_button}-@{key} {
       // @{key}-@{index}: @value;
       background-color: @value;
-      border: 1/@rem solid @value;
+      border: (1 / @rem) solid @value;
     }
   });
 }
