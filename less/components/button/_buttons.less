@@ -1,6 +1,7 @@
 .@{clsName_button} {
   background-color: transparent;
   border: @btn-border-width solid transparent;
+  border-radius: @btn-border-radius;
   color: @theme-light-backgroundcolor;
   cursor: if(@enable-button-pointers, pointer, null);
   display: inline-block;
@@ -23,12 +24,20 @@ each(@colors, {
     // @{key}-@{index}: @value;
     .button-variant(@value, light);
   }
+  .@{clsName_button}-@{key}-outline {
+    // @{key}-@{index}: @value;
+    .button-variant-outline(@value, light);
+  }
 });
 [data-theme="dark"] {
   each(@colors, {
     .@{clsName_button}-@{key} {
       // @{key}-@{index}: @value;
       .button-variant(@value, dark);
+    }
+    .@{clsName_button}-@{key}-outline {
+      // @{key}-@{index}: @value;
+      .button-variant-outline(@value, dark);
     }
   });
 }
@@ -39,6 +48,7 @@ each(@colors, {
   padding-left: @btn-padding-x-xs;
   padding-right: @btn-padding-x-xs;
   padding-top: @btn-padding-y-xs;
+  border-radius: @btn-border-radius-xs;
 }
 .@{clsName_button}-sm {
   font-size: @btn-font-size-sm;
@@ -47,6 +57,7 @@ each(@colors, {
   padding-left: @btn-padding-x-sm;
   padding-right: @btn-padding-x-sm;
   padding-top: @btn-padding-y-sm;
+  border-radius: @btn-border-radius-sm;
 }
 .@{clsName_button}-lg {
   font-size: @btn-font-size-lg;
@@ -55,6 +66,7 @@ each(@colors, {
   padding-left: @btn-padding-x-lg;
   padding-right: @btn-padding-x-lg;
   padding-top: @btn-padding-y-lg;
+  border-radius: @btn-border-radius-lg;
 }
 .@{clsName_button}-xl {
   font-size: @btn-font-size-xl;
@@ -63,4 +75,5 @@ each(@colors, {
   padding-left: @btn-padding-x-xl;
   padding-right: @btn-padding-x-xl;
   padding-top: @btn-padding-y-xl;
+  border-radius: @btn-border-radius-xl;
 }

@@ -70,6 +70,13 @@
 @font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 @font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
+@border-radius-xs: (4 / @rem);
+@border-radius-sm: (5 / @rem);
+@border-radius: (6 / @rem);
+@border-radius-lg: (7 / @rem);
+@border-radius-xl: (8 / @rem);
+@border-radius-pill: (50 / @rem);
+
 @theme-light-color: @grays[gray100];
 @theme-light-backgroundcolor: @grays[gray900];
 @theme-dark-color: @grays[gray900];
@@ -81,10 +88,10 @@
 
 @border-width: (1 / @rem);
 
-@line-height-base: 1.5;
-@line-height-xs: 1.25;
+@line-height-xs: 1;
 @line-height-sm: 1.25;
-@line-height-lg: 2;
+@line-height-base: 1.5;
+@line-height-lg: 1.75;
 @line-height-xl: 2;
 
 @font-weight-light: 300;
@@ -92,10 +99,10 @@
 @font-weight-bold: 700;
 
 @font-size-base: (@root-font-size / @rem);
-@font-size-xs: @font-size-base * .875;
-@font-size-sm: @font-size-base * .875;
+@font-size-xs: @font-size-base * .5;
+@font-size-sm: @font-size-base * .75;
 @font-size-lg: @font-size-base * 1.25;
-@font-size-xl: @font-size-base * 1.25;
+@font-size-xl: @font-size-base * 1.5;
 
 @input-font-family: @font-family-sans-serif;
 @input-line-height: @line-height-base;
@@ -103,28 +110,33 @@
 @input-font-size: @font-size-base;
 @input-padding-y: (7 / @rem);
 @input-padding-x: (13 / @rem);
+@input-border-radius: @border-radius;
 
-@input-padding-y-xs:      .25rem;
-@input-padding-x-xs:      .5rem;
-@input-font-size-xs:      @font-size-xs;
+@input-padding-y-xs: (7 / @rem);
+@input-padding-x-xs: (13 / @rem);
+@input-font-size-xs: @font-size-xs;
 @input-line-height-xs: @line-height-xs;
+@input-border-radius-xs: @border-radius-xs;
 
-@input-padding-y-sm:      .25rem;
-@input-padding-x-sm:      .5rem;
-@input-font-size-sm:      @font-size-sm;
+@input-padding-y-sm: (7.5 / @rem);
+@input-padding-x-sm: (13 / @rem);
+@input-font-size-sm: @font-size-sm;
 @input-line-height-sm: @line-height-sm;
+@input-border-radius-sm: @border-radius-sm;
 
-@input-padding-y-lg:      .5rem;
-@input-padding-x-lg:      1rem;
-@input-font-size-lg:      @font-size-lg;
+@input-padding-y-lg: (5.5 / @rem);
+@input-padding-x-lg: (13 / @rem);
+@input-font-size-lg: @font-size-lg;
 @input-line-height-lg: @line-height-lg;
+@input-border-radius-lg: @border-radius-lg;
 
-@input-padding-y-xl:      .5rem;
-@input-padding-x-xl:      1rem;
-@input-font-size-xl:      @font-size-xl;
+@input-padding-y-xl: (5 / @rem);
+@input-padding-x-xl: (13 / @rem);
+@input-font-size-xl: @font-size-xl;
 @input-line-height-xl: @line-height-xl;
+@input-border-radius-xl: @border-radius-xl;
 
-@input-border-width:      @border-width;
+@input-border-width: @border-width;
 
 /* ==buttons== */
 @btn-border-width: @input-border-width;
@@ -153,5 +165,11 @@
 @btn-padding-y-lg: @input-padding-y-lg;
 @btn-padding-x-xl: @input-padding-x-xl;
 @btn-padding-y-xl: @input-padding-y-xl;
+
+@btn-border-radius: @input-border-radius;
+@btn-border-radius-xs: @input-border-radius-xs;
+@btn-border-radius-sm: @input-border-radius-sm;
+@btn-border-radius-lg: @input-border-radius-lg;
+@btn-border-radius-xl: @input-border-radius-xl;
 
 @btn-font-weight: @font-weight-normal;

@@ -3,6 +3,16 @@
   border: (1 / @rem) solid @bg-color;
   color: contrast(@bg-color, @theme-light-color, @theme-dark-color);
   &:hover {
-    background-color: if((@theme = dark), lighten(@bg-color, 7.5%), darken(@bg-color, 7.5%));
+    background-color: if((@theme = dark), lighten(@bg-color, 15%), darken(@bg-color, 15%));
+  }
+}
+.button-variant-outline(@bg-color, @theme) {
+  background-color: if((@theme = dark), @theme-light-backgroundcolor, @theme-dark-backgroundcolor);
+  border: (1 / @rem) solid @bg-color;
+  color: @bg-color;
+  // contrast(@bg-color, @theme-light-color, @theme-dark-color);
+  &:hover {
+    background-color: @bg-color;
+    color: contrast(@bg-color, @theme-light-color, @theme-dark-color);
   }
 }
