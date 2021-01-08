@@ -1,0 +1,8 @@
+.button-variant(@bg-color, @theme) {
+  background-color: @bg-color;
+  border: (1 / @rem) solid @bg-color;
+  color: contrast(@bg-color, @theme-light-color, @theme-dark-color);
+  &:hover {
+    background-color: if((@theme = dark), lighten(@bg-color, 7.5%), darken(@bg-color, 7.5%));
+  }
+}

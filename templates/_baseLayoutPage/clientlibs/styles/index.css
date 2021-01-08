@@ -309,9 +309,14 @@ template {
   color: #212529;
   cursor: pointer;
   display: inline-block;
-  font-family: null;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
+  font-size: 1rem;
   line-height: 1.5;
+  padding-bottom: 0.4375rem;
+  padding-left: 0.8125rem;
+  padding-right: 0.8125rem;
+  padding-top: 0.4375rem;
   text-align: center;
   text-decoration: none;
   user-select: none;
@@ -321,82 +326,194 @@ template {
 .button-primary {
   background-color: #205d86;
   border: 0.0625rem solid #205d86;
+  color: #f8f9fa;
+}
+.button-primary:hover {
+  background-color: #194867;
 }
 .button-secondary {
   background-color: #77448b;
   border: 0.0625rem solid #77448b;
+  color: #f8f9fa;
+}
+.button-secondary:hover {
+  background-color: #613771;
 }
 .button-success {
   background-color: #20603c;
   border: 0.0625rem solid #20603c;
+  color: #f8f9fa;
+}
+.button-success:hover {
+  background-color: #16432a;
 }
 .button-info {
   background-color: #3a539b;
   border: 0.0625rem solid #3a539b;
+  color: #f8f9fa;
+}
+.button-info:hover {
+  background-color: #30447f;
 }
 .button-warning {
   background-color: #804600;
   border: 0.0625rem solid #804600;
+  color: #f8f9fa;
+}
+.button-warning:hover {
+  background-color: #5a3100;
 }
 .button-danger {
   background-color: #b11030;
   border: 0.0625rem solid #b11030;
+  color: #f8f9fa;
+}
+.button-danger:hover {
+  background-color: #8e0d26;
 }
 .button-light {
   background-color: #fcddc9;
   border: 0.0625rem solid #fcddc9;
+  color: #212529;
+}
+.button-light:hover {
+  background-color: #fac6a5;
 }
 .button-dark {
   background-color: #34515e;
   border: 0.0625rem solid #34515e;
+  color: #f8f9fa;
+}
+.button-dark:hover {
+  background-color: #263c45;
 }
 .button-white {
   background-color: #fff;
   border: 0.0625rem solid #fff;
+  color: #212529;
+}
+.button-white:hover {
+  background-color: #ececec;
 }
 .button-black {
   background-color: #000;
   border: 0.0625rem solid #000;
+  color: #f8f9fa;
+}
+.button-black:hover {
+  background-color: #000000;
 }
 [data-theme="dark"] .button-primary {
   background-color: #205d86;
   border: 0.0625rem solid #205d86;
+  color: #f8f9fa;
+}
+[data-theme="dark"] .button-primary:hover {
+  background-color: #2772a5;
 }
 [data-theme="dark"] .button-secondary {
   background-color: #77448b;
   border: 0.0625rem solid #77448b;
+  color: #f8f9fa;
+}
+[data-theme="dark"] .button-secondary:hover {
+  background-color: #8d51a5;
 }
 [data-theme="dark"] .button-success {
   background-color: #20603c;
   border: 0.0625rem solid #20603c;
+  color: #f8f9fa;
+}
+[data-theme="dark"] .button-success:hover {
+  background-color: #2a7d4e;
 }
 [data-theme="dark"] .button-info {
   background-color: #3a539b;
   border: 0.0625rem solid #3a539b;
+  color: #f8f9fa;
+}
+[data-theme="dark"] .button-info:hover {
+  background-color: #4462b7;
 }
 [data-theme="dark"] .button-warning {
   background-color: #804600;
   border: 0.0625rem solid #804600;
+  color: #f8f9fa;
+}
+[data-theme="dark"] .button-warning:hover {
+  background-color: #a65b00;
 }
 [data-theme="dark"] .button-danger {
   background-color: #b11030;
   border: 0.0625rem solid #b11030;
+  color: #f8f9fa;
+}
+[data-theme="dark"] .button-danger:hover {
+  background-color: #d4133a;
 }
 [data-theme="dark"] .button-light {
   background-color: #fcddc9;
   border: 0.0625rem solid #fcddc9;
+  color: #212529;
+}
+[data-theme="dark"] .button-light:hover {
+  background-color: #fef4ed;
 }
 [data-theme="dark"] .button-dark {
   background-color: #34515e;
   border: 0.0625rem solid #34515e;
+  color: #f8f9fa;
+}
+[data-theme="dark"] .button-dark:hover {
+  background-color: #426677;
 }
 [data-theme="dark"] .button-white {
   background-color: #fff;
   border: 0.0625rem solid #fff;
+  color: #212529;
+}
+[data-theme="dark"] .button-white:hover {
+  background-color: #ffffff;
 }
 [data-theme="dark"] .button-black {
   background-color: #000;
   border: 0.0625rem solid #000;
+  color: #f8f9fa;
+}
+[data-theme="dark"] .button-black:hover {
+  background-color: #131313;
+}
+.button-xs {
+  font-size: 0.875rem;
+  line-height: 1.25;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+}
+.button-sm {
+  font-size: 0.875rem;
+  line-height: 1.25;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+}
+.button-lg {
+  font-size: 1.25rem;
+  line-height: 2;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+}
+.button-xl {
+  font-size: 1.25rem;
+  line-height: 2;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
 }
 
 

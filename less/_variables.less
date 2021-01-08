@@ -67,6 +67,9 @@
   6: @spacer * 6;
 };
 
+@font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+@font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
 @theme-light-color: @grays[gray100];
 @theme-light-backgroundcolor: @grays[gray900];
 @theme-dark-color: @grays[gray900];
@@ -76,26 +79,79 @@
 @enable-button-pointers: true;
 @is-link-decoration-none: boolean(@link-decoration = none);
 
+@border-width: (1 / @rem);
+
 @line-height-base: 1.5;
+@line-height-xs: 1.25;
 @line-height-sm: 1.25;
 @line-height-lg: 2;
+@line-height-xl: 2;
 
 @font-weight-light: 300;
 @font-weight-normal: 400;
 @font-weight-bold: 700;
 
 @font-size-base: (@root-font-size / @rem);
+@font-size-xs: @font-size-base * .875;
 @font-size-sm: @font-size-base * .875;
 @font-size-lg: @font-size-base * 1.25;
+@font-size-xl: @font-size-base * 1.25;
 
-@input-btn-font-family: null;
-@input-btn-font-size: @font-size-base;
-@input-btn-line-height: @line-height-base;
+@input-font-family: @font-family-sans-serif;
+@input-line-height: @line-height-base;
+
+@input-font-size: @font-size-base;
+@input-padding-y: (7 / @rem);
+@input-padding-x: (13 / @rem);
+
+@input-padding-y-xs:      .25rem;
+@input-padding-x-xs:      .5rem;
+@input-font-size-xs:      @font-size-xs;
+@input-line-height-xs: @line-height-xs;
+
+@input-padding-y-sm:      .25rem;
+@input-padding-x-sm:      .5rem;
+@input-font-size-sm:      @font-size-sm;
+@input-line-height-sm: @line-height-sm;
+
+@input-padding-y-lg:      .5rem;
+@input-padding-x-lg:      1rem;
+@input-font-size-lg:      @font-size-lg;
+@input-line-height-lg: @line-height-lg;
+
+@input-padding-y-xl:      .5rem;
+@input-padding-x-xl:      1rem;
+@input-font-size-xl:      @font-size-xl;
+@input-line-height-xl: @line-height-xl;
+
+@input-border-width:      @border-width;
 
 /* ==buttons== */
-@btn-border-width: (1 / @rem);
+@btn-border-width: @input-border-width;
 @btn-white-space: none;
-@btn-font-family: @input-btn-font-family;
-@btn-font-size: @input-btn-font-size;
-@btn-line-height: @input-btn-line-height;
+@btn-font-family: @input-font-family;
+
+@btn-font-size: @input-font-size;
+@btn-font-size-xs: @input-font-size-xs;
+@btn-font-size-sm: @input-font-size-sm;
+@btn-font-size-lg: @input-font-size-lg;
+@btn-font-size-xl: @input-font-size-xl;
+
+@btn-line-height: @input-line-height;
+@btn-line-height-xs: @input-line-height-xs;
+@btn-line-height-sm: @input-line-height-sm;
+@btn-line-height-lg: @input-line-height-lg;
+@btn-line-height-xl: @input-line-height-xl;
+
+@btn-padding-x: @input-padding-x;
+@btn-padding-y: @input-padding-y;
+@btn-padding-x-xs: @input-padding-x-xs;
+@btn-padding-y-xs: @input-padding-y-xs;
+@btn-padding-x-sm: @input-padding-x-sm;
+@btn-padding-y-sm: @input-padding-y-sm;
+@btn-padding-x-lg: @input-padding-x-lg;
+@btn-padding-y-lg: @input-padding-y-lg;
+@btn-padding-x-xl: @input-padding-x-xl;
+@btn-padding-y-xl: @input-padding-y-xl;
+
 @btn-font-weight: @font-weight-normal;
