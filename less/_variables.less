@@ -2,52 +2,58 @@
 
 @rem: @root-font-size*1rem;
 
-@grays: {
-  gray0: #fff;
-  gray100: #f8f9fa;
-  gray200: #e9ecef;
-  gray300: #dee2e6;
-  gray400: #ced4da;
-  gray500: #adb5bd;
-  gray600: #6c757d;
-  gray700: #495057;
-  gray800: #343a40;
-  gray900: #212529;
-  gray1000: #000;
-};
-
-// @colors: {
-//   primary: @blue;
-//   secondary: @grays[gray600];
-//   success: @green;
-//   info: @cyan;
-//   warning: @yellow;
-//   danger: @red;
-//   light: @grays[gray100];
-//   dark: @grays[gray900];
-//   white: @grays[gray0];
-//   black: @grays[gray1000];
+// @grays: {
+//   gray0: #fff;
+//   gray100: #f8f9fa;
+//   gray200: #e9ecef;
+//   gray300: #dee2e6;
+//   gray400: #ced4da;
+//   gray500: #adb5bd;
+//   gray600: #6c757d;
+//   gray700: #495057;
+//   gray800: #343a40;
+//   gray900: #212529;
+//   gray1000: #000;
 // };
 
+@grays: {
+  gray00: #000;
+  gray01: #111;
+  gray02: #222;
+  gray03: #333;
+  gray04: #444;
+  gray05: #555;
+  gray06: #666;
+  gray07: #777;
+  gray08: #888;
+  gray09: #999;
+  gray10: #aaa;
+  gray11: #bbb;
+  gray12: #ccc;
+  gray13: #ddd;
+  gray14: #eee;
+  gray15: #fff;
+};
+
 @colors: {
-  primary: #205d86;
-  secondary: #77448b;
-  success: #20603c;
-  info: #3a539b;
-  warning: #804600;
-  danger: #b11030;
-  light: #fcddc9;
-  dark: #34515e;
-  white: @grays[gray0];
-  black: @grays[gray1000];
+  primary: #574cfa;
+  secondary: #77216F;
+  success: #01a38a;
+  info: #0580fc;
+  warning: #fe9100;
+  danger: #eb034c;
+  light: #e5ded6;
+  dark: #49433c;
+  white: @grays[gray15];
+  black: @grays[gray00];
 };
 
 
 @breakpoints: {
   xs: (0 / @em);
-  sm: (576 / @em);
-  md: (768 /@em);
-  lg: (992 / @em);
+  s: (576 / @em);
+  m: (768 /@em);
+  l: (992 / @em);
   xl: (1200 / @em);
   xxl: (1392 / @em);
 };
@@ -77,10 +83,10 @@
 @border-radius-xl: (8 / @rem);
 @border-radius-pill: (50 / @rem);
 
-@theme-light-color: @grays[gray100];
-@theme-light-backgroundcolor: @grays[gray900];
-@theme-dark-color: @grays[gray900];
-@theme-dark-backgroundcolor: @grays[gray100];
+@theme-light-color: @grays[gray02];
+@theme-light-backgroundcolor: @grays[gray13];
+@theme-dark-color: @grays[gray13];
+@theme-dark-backgroundcolor: @grays[gray02];
 
 @link-decoration: underline;
 @enable-button-pointers: true;
