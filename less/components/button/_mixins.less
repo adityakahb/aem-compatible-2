@@ -10,7 +10,6 @@
   background-color: if((@theme = dark), @theme-light-backgroundcolor, @theme-dark-backgroundcolor);
   border: (1 / @rem) solid @bg-color;
   color: @bg-color;
-  // contrast(@bg-color, @theme-light-color, @theme-dark-color);
   &:hover {
     background-color: @bg-color;
     color: contrast(@bg-color, @theme-light-color, @theme-dark-color);
