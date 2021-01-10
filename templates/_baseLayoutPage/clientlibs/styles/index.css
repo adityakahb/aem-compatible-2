@@ -408,8 +408,8 @@ body {
 .button {
   background-color: transparent;
   border: 0.0625rem solid transparent;
-  border-radius: 0.375rem;
-  color: #ddd;
+  border-radius: 0.25rem;
+  color: #eee;
   cursor: pointer;
   display: inline-block;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -427,344 +427,344 @@ body {
   white-space: none;
 }
 .button-primary {
-  background-color: #574cfa;
-  border: 0.0625rem solid #574cfa;
-  color: #ddd;
+  background-color: #0580fc;
+  border: 0.0625rem solid #0580fc;
+  color: #eee;
 }
 .button-primary:hover {
-  background-color: #4033f9;
+  background-color: #0373e5;
 }
 .button-primary-outline {
-  background-color: #222;
-  border: 0.0625rem solid #574cfa;
-  color: #574cfa;
+  background-color: #111;
+  border: 0.0625rem solid #0580fc;
+  color: #0580fc;
 }
 .button-primary-outline:hover {
-  background-color: #574cfa;
-  color: #ddd;
+  background-color: #0580fc;
+  color: #eee;
 }
 .button-secondary {
   background-color: #77216F;
   border: 0.0625rem solid #77216F;
-  color: #ddd;
+  color: #eee;
 }
 .button-secondary:hover {
   background-color: #631b5c;
 }
 .button-secondary-outline {
-  background-color: #222;
+  background-color: #111;
   border: 0.0625rem solid #77216F;
   color: #77216F;
 }
 .button-secondary-outline:hover {
   background-color: #77216F;
-  color: #ddd;
+  color: #eee;
 }
 .button-success {
   background-color: #01a38a;
   border: 0.0625rem solid #01a38a;
-  color: #ddd;
+  color: #eee;
 }
 .button-success:hover {
   background-color: #018a75;
 }
 .button-success-outline {
-  background-color: #222;
+  background-color: #111;
   border: 0.0625rem solid #01a38a;
   color: #01a38a;
 }
 .button-success-outline:hover {
   background-color: #01a38a;
-  color: #ddd;
+  color: #eee;
 }
 .button-info {
-  background-color: #0580fc;
-  border: 0.0625rem solid #0580fc;
-  color: #ddd;
+  background-color: #5412A3;
+  border: 0.0625rem solid #5412A3;
+  color: #eee;
 }
 .button-info:hover {
-  background-color: #0373e5;
+  background-color: #480f8c;
 }
 .button-info-outline {
-  background-color: #222;
-  border: 0.0625rem solid #0580fc;
-  color: #0580fc;
+  background-color: #111;
+  border: 0.0625rem solid #5412A3;
+  color: #5412A3;
 }
 .button-info-outline:hover {
-  background-color: #0580fc;
-  color: #ddd;
+  background-color: #5412A3;
+  color: #eee;
 }
 .button-warning {
   background-color: #fe9100;
   border: 0.0625rem solid #fe9100;
-  color: #ddd;
+  color: #eee;
 }
 .button-warning:hover {
   background-color: #e58200;
 }
 .button-warning-outline {
-  background-color: #222;
+  background-color: #111;
   border: 0.0625rem solid #fe9100;
   color: #fe9100;
 }
 .button-warning-outline:hover {
   background-color: #fe9100;
-  color: #ddd;
+  color: #eee;
 }
 .button-danger {
   background-color: #eb034c;
   border: 0.0625rem solid #eb034c;
-  color: #ddd;
+  color: #eee;
 }
 .button-danger:hover {
   background-color: #d20344;
 }
 .button-danger-outline {
-  background-color: #222;
+  background-color: #111;
   border: 0.0625rem solid #eb034c;
   color: #eb034c;
 }
 .button-danger-outline:hover {
   background-color: #eb034c;
-  color: #ddd;
+  color: #eee;
 }
 .button-light {
   background-color: #e5ded6;
   border: 0.0625rem solid #e5ded6;
-  color: #222;
+  color: #111;
 }
 .button-light:hover {
   background-color: #dbd1c6;
 }
 .button-light-outline {
-  background-color: #222;
+  background-color: #111;
   border: 0.0625rem solid #e5ded6;
   color: #e5ded6;
 }
 .button-light-outline:hover {
   background-color: #e5ded6;
-  color: #222;
+  color: #111;
 }
 .button-dark {
   background-color: #49433c;
   border: 0.0625rem solid #49433c;
-  color: #ddd;
+  color: #eee;
 }
 .button-dark:hover {
   background-color: #3b3630;
 }
 .button-dark-outline {
-  background-color: #222;
+  background-color: #111;
   border: 0.0625rem solid #49433c;
   color: #49433c;
 }
 .button-dark-outline:hover {
   background-color: #49433c;
-  color: #ddd;
+  color: #eee;
 }
 .button-white {
   background-color: #fff;
   border: 0.0625rem solid #fff;
-  color: #222;
+  color: #111;
 }
 .button-white:hover {
   background-color: #f2f2f2;
 }
 .button-white-outline {
-  background-color: #222;
+  background-color: #111;
   border: 0.0625rem solid #fff;
   color: #fff;
 }
 .button-white-outline:hover {
   background-color: #fff;
-  color: #222;
+  color: #111;
 }
 .button-black {
   background-color: #000;
   border: 0.0625rem solid #000;
-  color: #ddd;
+  color: #eee;
 }
 .button-black:hover {
   background-color: #000000;
 }
 .button-black-outline {
-  background-color: #222;
+  background-color: #111;
   border: 0.0625rem solid #000;
   color: #000;
 }
 .button-black-outline:hover {
   background-color: #000;
-  color: #ddd;
+  color: #eee;
 }
 [data-theme="dark"] .button-primary {
-  background-color: #574cfa;
-  border: 0.0625rem solid #574cfa;
-  color: #ddd;
+  background-color: #0580fc;
+  border: 0.0625rem solid #0580fc;
+  color: #eee;
 }
 [data-theme="dark"] .button-primary:hover {
-  background-color: #6e65fb;
+  background-color: #1e8dfc;
 }
 [data-theme="dark"] .button-primary-outline {
-  background-color: #ddd;
-  border: 0.0625rem solid #574cfa;
-  color: #574cfa;
+  background-color: #eee;
+  border: 0.0625rem solid #0580fc;
+  color: #0580fc;
 }
 [data-theme="dark"] .button-primary-outline:hover {
-  background-color: #574cfa;
-  color: #ddd;
+  background-color: #0580fc;
+  color: #eee;
 }
 [data-theme="dark"] .button-secondary {
   background-color: #77216F;
   border: 0.0625rem solid #77216F;
-  color: #ddd;
+  color: #eee;
 }
 [data-theme="dark"] .button-secondary:hover {
   background-color: #8b2782;
 }
 [data-theme="dark"] .button-secondary-outline {
-  background-color: #ddd;
+  background-color: #eee;
   border: 0.0625rem solid #77216F;
   color: #77216F;
 }
 [data-theme="dark"] .button-secondary-outline:hover {
   background-color: #77216F;
-  color: #ddd;
+  color: #eee;
 }
 [data-theme="dark"] .button-success {
   background-color: #01a38a;
   border: 0.0625rem solid #01a38a;
-  color: #ddd;
+  color: #eee;
 }
 [data-theme="dark"] .button-success:hover {
   background-color: #01bc9f;
 }
 [data-theme="dark"] .button-success-outline {
-  background-color: #ddd;
+  background-color: #eee;
   border: 0.0625rem solid #01a38a;
   color: #01a38a;
 }
 [data-theme="dark"] .button-success-outline:hover {
   background-color: #01a38a;
-  color: #ddd;
+  color: #eee;
 }
 [data-theme="dark"] .button-info {
-  background-color: #0580fc;
-  border: 0.0625rem solid #0580fc;
-  color: #ddd;
+  background-color: #5412A3;
+  border: 0.0625rem solid #5412A3;
+  color: #eee;
 }
 [data-theme="dark"] .button-info:hover {
-  background-color: #1e8dfc;
+  background-color: #6015ba;
 }
 [data-theme="dark"] .button-info-outline {
-  background-color: #ddd;
-  border: 0.0625rem solid #0580fc;
-  color: #0580fc;
+  background-color: #eee;
+  border: 0.0625rem solid #5412A3;
+  color: #5412A3;
 }
 [data-theme="dark"] .button-info-outline:hover {
-  background-color: #0580fc;
-  color: #ddd;
+  background-color: #5412A3;
+  color: #eee;
 }
 [data-theme="dark"] .button-warning {
   background-color: #fe9100;
   border: 0.0625rem solid #fe9100;
-  color: #ddd;
+  color: #eee;
 }
 [data-theme="dark"] .button-warning:hover {
   background-color: #ff9c19;
 }
 [data-theme="dark"] .button-warning-outline {
-  background-color: #ddd;
+  background-color: #eee;
   border: 0.0625rem solid #fe9100;
   color: #fe9100;
 }
 [data-theme="dark"] .button-warning-outline:hover {
   background-color: #fe9100;
-  color: #ddd;
+  color: #eee;
 }
 [data-theme="dark"] .button-danger {
   background-color: #eb034c;
   border: 0.0625rem solid #eb034c;
-  color: #ddd;
+  color: #eee;
 }
 [data-theme="dark"] .button-danger:hover {
   background-color: #fc0c57;
 }
 [data-theme="dark"] .button-danger-outline {
-  background-color: #ddd;
+  background-color: #eee;
   border: 0.0625rem solid #eb034c;
   color: #eb034c;
 }
 [data-theme="dark"] .button-danger-outline:hover {
   background-color: #eb034c;
-  color: #ddd;
+  color: #eee;
 }
 [data-theme="dark"] .button-light {
   background-color: #e5ded6;
   border: 0.0625rem solid #e5ded6;
-  color: #222;
+  color: #111;
 }
 [data-theme="dark"] .button-light:hover {
   background-color: #efebe6;
 }
 [data-theme="dark"] .button-light-outline {
-  background-color: #ddd;
+  background-color: #eee;
   border: 0.0625rem solid #e5ded6;
   color: #e5ded6;
 }
 [data-theme="dark"] .button-light-outline:hover {
   background-color: #e5ded6;
-  color: #222;
+  color: #111;
 }
 [data-theme="dark"] .button-dark {
   background-color: #49433c;
   border: 0.0625rem solid #49433c;
-  color: #ddd;
+  color: #eee;
 }
 [data-theme="dark"] .button-dark:hover {
   background-color: #575048;
 }
 [data-theme="dark"] .button-dark-outline {
-  background-color: #ddd;
+  background-color: #eee;
   border: 0.0625rem solid #49433c;
   color: #49433c;
 }
 [data-theme="dark"] .button-dark-outline:hover {
   background-color: #49433c;
-  color: #ddd;
+  color: #eee;
 }
 [data-theme="dark"] .button-white {
   background-color: #fff;
   border: 0.0625rem solid #fff;
-  color: #222;
+  color: #111;
 }
 [data-theme="dark"] .button-white:hover {
   background-color: #ffffff;
 }
 [data-theme="dark"] .button-white-outline {
-  background-color: #ddd;
+  background-color: #eee;
   border: 0.0625rem solid #fff;
   color: #fff;
 }
 [data-theme="dark"] .button-white-outline:hover {
   background-color: #fff;
-  color: #222;
+  color: #111;
 }
 [data-theme="dark"] .button-black {
   background-color: #000;
   border: 0.0625rem solid #000;
-  color: #ddd;
+  color: #eee;
 }
 [data-theme="dark"] .button-black:hover {
   background-color: #0d0d0d;
 }
 [data-theme="dark"] .button-black-outline {
-  background-color: #ddd;
+  background-color: #eee;
   border: 0.0625rem solid #000;
   color: #000;
 }
 [data-theme="dark"] .button-black-outline:hover {
   background-color: #000;
-  color: #ddd;
+  color: #eee;
 }
 .button-xs {
   font-size: 0.5rem;
@@ -773,7 +773,7 @@ body {
   padding-left: 0.8125rem;
   padding-right: 0.8125rem;
   padding-top: 0.4375rem;
-  border-radius: 0.25rem;
+  border-radius: 0.125rem;
 }
 .button-sm {
   font-size: 0.75rem;
@@ -782,7 +782,7 @@ body {
   padding-left: 0.8125rem;
   padding-right: 0.8125rem;
   padding-top: 0.46875rem;
-  border-radius: 0.3125rem;
+  border-radius: 0.1875rem;
 }
 .button-lg {
   font-size: 1.25rem;
@@ -791,7 +791,7 @@ body {
   padding-left: 0.8125rem;
   padding-right: 0.8125rem;
   padding-top: 0.34375rem;
-  border-radius: 0.4375rem;
+  border-radius: 0.3125rem;
 }
 .button-xl {
   font-size: 1.5rem;
@@ -800,7 +800,7 @@ body {
   padding-left: 0.8125rem;
   padding-right: 0.8125rem;
   padding-top: 0.3125rem;
-  border-radius: 0.5rem;
+  border-radius: 0.375rem;
 }
 
 
