@@ -1,0 +1,51 @@
+.make-container {
+  width: 100%;
+  padding-right: @grid-gutter-width;
+  padding-left: @grid-gutter-width;
+  margin-right: auto;
+  margin-left: auto;
+}
+.generate-rowcols(@n, @bp-prefix, @i: 1) when (@i =< @n) {
+  .row-cols@{bp-prefix}-@{i} {
+    > * {
+      flex: 0 0 auto;
+      width: (100% / @i);
+    }
+  }
+  .generate-rowcols(@n, @bp-prefix, (@i + 1));
+}
+.generate-cols(@n, @bp-prefix, @i: 1) when (@i =< @n) {
+  .col@{bp-prefix}-@{i} {
+    flex: 0 0 auto;
+    width: (@i * 100% / @n);
+  }
+  .generate-cols(@n, @bp-prefix, (@i + 1));
+}
+.loopCols(@bp-prefix) {
+  .col@{bp-prefix} {
+    flex: 1 0 0%;
+  }
+  .row-cols@{bp-prefix}-auto > * {
+    flex: 0 0 auto;
+    width: auto;
+  }
+  .generate-rowcols(@grid-row-columns, @bp-prefix);
+  .col@{bp-prefix}-auto {
+    flex: 0 0 auto;
+    width: auto;
+  }
+  .generate-cols(@grid-columns, @bp-prefix);
+}
+.make-grid-columns {
+  each(@breakpoints, {
+    .defineBreakpointAttributes(@index, @key, @value);
+    & when (boolean(@bpkey = xs) = true) {
+      .loopCols(~'');
+    }
+    & when (boolean(@bpkey = xs) = false) {
+      @media (min-width: @bpvalue) {
+        .loopCols(~'-@{bpkey}');
+      }
+    }
+  });
+}

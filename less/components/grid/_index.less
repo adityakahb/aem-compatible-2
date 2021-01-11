@@ -1,0 +1,31 @@
+.container, .container-fluid {
+    .make-container();
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.make-grid-columns();
+// .loopDisplays(@bp-prefix) {
+//   each(@displayTypes, {
+//     .@{className-display}@{bp-prefix}-@{key} {
+//       display: @value !important;
+//     }
+//   });
+// };
+// each(@breakpoints, {
+//   .defineBreakpointAttributes(@index, @key, @value);
+//   & when (boolean(@bpkey = xs) = true) {
+//     .loopDisplays(~'');
+//   }
+//   & when (boolean(@bpkey = xs) = false) {
+//     @media (min-width: @bpvalue) {
+//       .loopDisplays(~'-@{bpkey}');
+//     }
+//   }
+// });
