@@ -9,10 +9,7 @@
   font-weight: @btn-font-weight;
   font-size: @btn-font-size;
   line-height: @btn-line-height;
-  padding-bottom: @btn-padding-y;
-  padding-left: @btn-padding-x;
-  padding-right: @btn-padding-x;
-  padding-top: @btn-padding-y;
+  padding: @btn-padding-y @btn-padding-x;
   text-align: center;
   text-decoration: if(boolean(@link-decoration = none), null, none);
   user-select: none;
@@ -43,38 +40,26 @@ each(@colors, {
 }
 .@{className-button-xs} {
   font-size: @btn-font-size-xs;
-  line-height: @btn-line-height-xs;
-  padding-bottom: @btn-padding-y-xs;
-  padding-left: @btn-padding-x-xs;
-  padding-right: @btn-padding-x-xs;
-  padding-top: @btn-padding-y-xs;
+  // line-height: @btn-line-height-xs;
+  padding: @btn-padding-y-xs @btn-padding-x-xs;
   border-radius: @btn-border-radius-xs;
 }
 .@{className-button-sm} {
   font-size: @btn-font-size-sm;
-  line-height: @btn-line-height-sm;
-  padding-bottom: @btn-padding-y-sm;
-  padding-left: @btn-padding-x-sm;
-  padding-right: @btn-padding-x-sm;
-  padding-top: @btn-padding-y-sm;
+  // line-height: @btn-line-height-sm;
+  padding: @btn-padding-y-sm @btn-padding-x-sm;
   border-radius: @btn-border-radius-sm;
 }
 .@{className-button-lg} {
   font-size: @btn-font-size-lg;
-  line-height: @btn-line-height-lg;
-  padding-bottom: @btn-padding-y-lg;
-  padding-left: @btn-padding-x-lg;
-  padding-right: @btn-padding-x-lg;
-  padding-top: @btn-padding-y-lg;
+  // line-height: @btn-line-height-lg;
+  padding: @btn-padding-y-lg @btn-padding-x-lg;
   border-radius: @btn-border-radius-lg;
 }
 .@{className-button-xl} {
   font-size: @btn-font-size-xl;
-  line-height: @btn-line-height-xl;
-  padding-bottom: @btn-padding-y-xl;
-  padding-left: @btn-padding-x-xl;
-  padding-right: @btn-padding-x-xl;
-  padding-top: @btn-padding-y-xl;
+  // line-height: @btn-line-height-xl;
+  padding: @btn-padding-y-xl @btn-padding-x-xl;
   border-radius: @btn-border-radius-xl;
 }
 .@{className-button}-@{className-pill} {

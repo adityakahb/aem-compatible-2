@@ -2556,10 +2556,7 @@ body {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5;
-  padding-bottom: 0.4375rem;
-  padding-left: 0.8125rem;
-  padding-right: 0.8125rem;
-  padding-top: 0.4375rem;
+  padding: 0.45rem 0.45rem;
   text-align: center;
   text-decoration: none;
   user-select: none;
@@ -3128,38 +3125,22 @@ body {
 }
 .button-xs {
   font-size: 0.5rem;
-  line-height: 1;
-  padding-bottom: 0.4375rem;
-  padding-left: 0.8125rem;
-  padding-right: 0.8125rem;
-  padding-top: 0.4375rem;
+  padding: 0.32rem 0.32rem;
   border-radius: 0.125rem;
 }
 .button-sm {
   font-size: 0.75rem;
-  line-height: 1.25;
-  padding-bottom: 0.46875rem;
-  padding-left: 0.8125rem;
-  padding-right: 0.8125rem;
-  padding-top: 0.46875rem;
+  padding: 0.4rem 0.4rem;
   border-radius: 0.25rem;
 }
 .button-lg {
   font-size: 1.25rem;
-  line-height: 1.75;
-  padding-bottom: 0.34375rem;
-  padding-left: 0.8125rem;
-  padding-right: 0.8125rem;
-  padding-top: 0.34375rem;
+  padding: 0.5rem 0.5rem;
   border-radius: 0.5rem;
 }
 .button-xl {
   font-size: 1.5rem;
-  line-height: 2;
-  padding-bottom: 0.3125rem;
-  padding-left: 0.8125rem;
-  padding-right: 0.8125rem;
-  padding-top: 0.3125rem;
+  padding: 0.58rem 0.58rem;
   border-radius: 0.625rem;
 }
 .button-pill {
