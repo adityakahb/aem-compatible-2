@@ -1,38 +1,61 @@
-.loopSpacers(@bp) {
+.loopSpacers(@bp-prefix) {
   each(@spacers, {
-    .@{className-spacer-padding}-@{bp}-@{key} {
-      padding: @value;
+    .@{className-spacer-padding}@{bp-prefix}-@{key} {
+      padding: @value  !important;
     }
-    .@{className-spacer-padding}-@{className-spacer-left}@{className-spacer-right}-@{bp}-@{key} {
-      padding-left: @value;
-      padding-right: @value;
+    .@{className-spacer-padding}-@{className-spacer-left}@{className-spacer-right}@{bp-prefix}-@{key} {
+      padding-left: @value  !important;
+      padding-right: @value  !important;
     }
-    .@{className-spacer-padding}-@{className-spacer-top}@{className-spacer-bottom}-@{bp}-@{key} {
-      padding-top: @value;
-      padding-bottom: @value;
+    .@{className-spacer-padding}-@{className-spacer-top}@{className-spacer-bottom}@{bp-prefix}-@{key} {
+      padding-top: @value  !important;
+      padding-bottom: @value  !important;
     }
-    .@{className-spacer-padding}-@{className-spacer-top}-@{bp}-@{key} {
-      padding-left: @value;
+    .@{className-spacer-padding}-@{className-spacer-top}@{bp-prefix}-@{key} {
+      padding-left: @value  !important;
     }
-    .@{className-spacer-padding}-@{className-spacer-right}-@{bp}-@{key} {
-      padding-right: @value;
+    .@{className-spacer-padding}-@{className-spacer-right}@{bp-prefix}-@{key} {
+      padding-right: @value  !important;
     }
-    .@{className-spacer-padding}-@{className-spacer-bottom}-@{bp}-@{key} {
-      padding-bottom: @value;
+    .@{className-spacer-padding}-@{className-spacer-bottom}@{bp-prefix}-@{key} {
+      padding-bottom: @value  !important;
     }
-    .@{className-spacer-padding}-@{className-spacer-left}-@{bp}-@{key} {
-      padding-left: @value;
+    .@{className-spacer-padding}-@{className-spacer-left}@{bp-prefix}-@{key} {
+      padding-left: @value  !important;
+    }
+    .@{className-spacer-margin}@{bp-prefix}-@{key} {
+      margin: @value  !important;
+    }
+    .@{className-spacer-margin}-@{className-spacer-left}@{className-spacer-right}@{bp-prefix}-@{key} {
+      margin-left: @value  !important;
+      margin-right: @value  !important;
+    }
+    .@{className-spacer-margin}-@{className-spacer-top}@{className-spacer-bottom}@{bp-prefix}-@{key} {
+      margin-top: @value  !important;
+      margin-bottom: @value  !important;
+    }
+    .@{className-spacer-margin}-@{className-spacer-top}@{bp-prefix}-@{key} {
+      margin-left: @value  !important;
+    }
+    .@{className-spacer-margin}-@{className-spacer-right}@{bp-prefix}-@{key} {
+      margin-right: @value  !important;
+    }
+    .@{className-spacer-margin}-@{className-spacer-bottom}@{bp-prefix}-@{key} {
+      margin-bottom: @value  !important;
+    }
+    .@{className-spacer-margin}-@{className-spacer-left}@{bp-prefix}-@{key} {
+      margin-left: @value  !important;
     }
   });
 }
 each(@breakpoints, {
   .defineBreakpointAttributes(@index, @key, @value);
   & when (boolean(@bpkey = xs) = true) {
-    .loopSpacers(@bpkey);
+    .loopSpacers(~'');
   }
   & when (boolean(@bpkey = xs) = false) {
     @media (min-width: @bpvalue) {
-      .loopSpacers(@bpkey);
+      .loopSpacers(~'-@{bpkey}');
     }
   }
 });

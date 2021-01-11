@@ -29,7 +29,7 @@ each(@colors, {
     .button-variant-outline(@value, light);
   }
 });
-[data-theme="dark"] {
+[data-theme="@{theme-name-dark}"] {
   each(@colors, {
     .@{className-button}-@{key} {
       // @{key}-@{index}: @value;
@@ -41,7 +41,7 @@ each(@colors, {
     }
   });
 }
-.@{className-button}-xs {
+.@{className-button-xs} {
   font-size: @btn-font-size-xs;
   line-height: @btn-line-height-xs;
   padding-bottom: @btn-padding-y-xs;
@@ -50,7 +50,7 @@ each(@colors, {
   padding-top: @btn-padding-y-xs;
   border-radius: @btn-border-radius-xs;
 }
-.@{className-button}-sm {
+.@{className-button-sm} {
   font-size: @btn-font-size-sm;
   line-height: @btn-line-height-sm;
   padding-bottom: @btn-padding-y-sm;
@@ -59,7 +59,7 @@ each(@colors, {
   padding-top: @btn-padding-y-sm;
   border-radius: @btn-border-radius-sm;
 }
-.@{className-button}-lg {
+.@{className-button-lg} {
   font-size: @btn-font-size-lg;
   line-height: @btn-line-height-lg;
   padding-bottom: @btn-padding-y-lg;
@@ -68,7 +68,7 @@ each(@colors, {
   padding-top: @btn-padding-y-lg;
   border-radius: @btn-border-radius-lg;
 }
-.@{className-button}-xl {
+.@{className-button-xl} {
   font-size: @btn-font-size-xl;
   line-height: @btn-line-height-xl;
   padding-bottom: @btn-padding-y-xl;
@@ -76,4 +76,7 @@ each(@colors, {
   padding-right: @btn-padding-x-xl;
   padding-top: @btn-padding-y-xl;
   border-radius: @btn-border-radius-xl;
+}
+.@{className-button}-@{className-pill} {
+  border-radius: @border-radius-pill !important;
 }

@@ -3,7 +3,12 @@
   border: (1 / @rem) solid @bg-color;
   color: contrast(@bg-color, @theme-light-color, @theme-dark-color);
   &:hover {
-    background-color: if((@theme = dark), lighten(@bg-color, 5%), darken(@bg-color, 5%));
+    background-color: if((@theme = @theme-name-dark), lighten(@bg-color, 10%), darken(@bg-color, 10%));
+  }
+  &:disabled, &[aria-disabled="true"] {
+    cursor: not-allowed;
+    opacity: if((@theme = @theme-name-dark), 0.5, 0.25);
+    pointer-events: none;
   }
 }
 .button-variant-outline(@bg-color, @theme) {
@@ -13,7 +18,12 @@
   color: @bg-color;
   &:hover {
     // background-color: @bg-color;
-    background-color: if((@theme = dark), lighten(@bg-color, 5%), darken(@bg-color, 5%));
-    color: contrast(@bg-color, @theme-light-color, @theme-dark-color);
+    background-color: if((@theme = @theme-name-dark), rgba(lighten(@bg-color, 10%), 0.1), rgba(darken(@bg-color, 10%), 0.1));
+    // color: contrast(@bg-color, @theme-light-color, @theme-dark-color);
+  }
+  &:disabled, &[aria-disabled="true"] {
+    cursor: not-allowed;
+    opacity: if((@theme = @theme-name-dark), 0.5, 0.25);
+    pointer-events: none;
   }
 }
