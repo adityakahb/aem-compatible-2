@@ -1,6 +1,7 @@
 @root-font-size: 16;
 
 @rem: @root-font-size*1rem;
+@em: @root-font-size*1em;
 
 // @grays: {
 //   gray0: #fff;
@@ -65,22 +66,22 @@
 @spacer: (16 / @rem);
 @spacers: {
   0: 0;
-  1: @spacer / 4;
-  2: @spacer / 2;
+  1: (@spacer / 4);
+  2: (@spacer / 2);
   3: @spacer;
-  4: @spacer * 2;
-  5: @spacer * 4;
-  6: @spacer * 6;
+  4: (@spacer * 2);
+  5: (@spacer * 4);
+  6: (@spacer * 6);
 };
 
 @font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 @font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
 @border-radius-xs: (2 / @rem);
-@border-radius-sm: (3 / @rem);
-@border-radius: (4 / @rem);
-@border-radius-lg: (5 / @rem);
-@border-radius-xl: (6 / @rem);
+@border-radius-sm: (4 / @rem);
+@border-radius: (6 / @rem);
+@border-radius-lg: (8 / @rem);
+@border-radius-xl: (10 / @rem);
 @border-radius-pill: (50 / @rem);
 
 @theme-light-color: @grays[gray01];

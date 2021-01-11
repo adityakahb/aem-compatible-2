@@ -1,3 +1,38 @@
-each(@spacers, {
-  
+.loopSpacers(@bp) {
+  each(@spacers, {
+    .@{className-spacer-padding}-@{bp}-@{key} {
+      padding: @value;
+    }
+    .@{className-spacer-padding}-@{className-spacer-left}-@{className-spacer-right}-@{bp}-@{key} {
+      padding-left: @value;
+      padding-right: @value;
+    }
+    .@{className-spacer-padding}-@{className-spacer-top}-@{className-spacer-bottom}-@{bp}-@{key} {
+      padding-top: @value;
+      padding-bottom: @value;
+    }
+    .@{className-spacer-padding}-@{className-spacer-top}-@{bp}-@{key} {
+      padding-left: @value;
+    }
+    .@{className-spacer-padding}-@{className-spacer-right}-@{bp}-@{key} {
+      padding-right: @value;
+    }
+    .@{className-spacer-padding}-@{className-spacer-bottom}-@{bp}-@{key} {
+      padding-bottom: @value;
+    }
+    .@{className-spacer-padding}-@{className-spacer-left}-@{bp}-@{key} {
+      padding-left: @value;
+    }
+  });
+}
+each(@breakpoints, {
+  .defineBreakpointAttributes(@index, @key, @value);
+  & when (boolean(@bpkey = xs) = true) {
+    .loopSpacers(@bpkey);
+  }
+  & when (boolean(@bpkey = xs) = false) {
+    @media (min-width: @bpvalue) {
+      .loopSpacers(@bpkey);
+    }
+  }
 });

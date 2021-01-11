@@ -7,11 +7,13 @@
   }
 }
 .button-variant-outline(@bg-color, @theme) {
-  background-color: if((@theme = dark), @theme-light-backgroundcolor, @theme-dark-backgroundcolor);
+  // background-color: if((@theme = dark), @theme-light-backgroundcolor, @theme-dark-backgroundcolor);
+  background-color: transparent;
   border: (1 / @rem) solid @bg-color;
   color: @bg-color;
   &:hover {
-    background-color: @bg-color;
+    // background-color: @bg-color;
+    background-color: if((@theme = dark), lighten(@bg-color, 5%), darken(@bg-color, 5%));
     color: contrast(@bg-color, @theme-light-color, @theme-dark-color);
   }
 }
