@@ -1,0 +1,18 @@
+.loopLists(@bp-prefix) {
+  each(@listTypes, {
+    .@{className-list-style}@{bp-prefix}-@{key} {
+      list-style-type: @value !important;
+    }
+  });
+};
+each(@breakpoints, {
+  .defineBreakpointAttributes(@index, @key, @value);
+  & when (boolean(@bpkey = xs) = true) {
+    .loopLists(~'');
+  }
+  & when (boolean(@bpkey = xs) = false) {
+    @media (min-width: @bpvalue) {
+      .loopLists(~'-@{bpkey}');
+    }
+  }
+});

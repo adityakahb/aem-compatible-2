@@ -45,8 +45,8 @@ module.exports = (env, argv) => {
               loader: 'file-loader',
               options: {
                 name: '[name].[ext]',
-                outputPath: './assets/webfonts',
-                publicPath: '../../../../assets/webfonts'
+                outputPath: './templates/_baseLayoutPage/clientlibs/styles/iconfont',
+                publicPath: './iconfont'
               }
             }
           ]

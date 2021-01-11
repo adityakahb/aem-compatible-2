@@ -38,9 +38,9 @@
 
 @colors: {
   primary: #0580fc;
-  secondary: #77216F;
+  secondary: #913d88;
   success: #01a38a;
-  info: #5412A3;
+  info: #4b6a88;
   warning: #fe9100;
   danger: #eb034c;
   light: #e5ded6;
@@ -74,6 +74,59 @@
   6: (@spacer * 6);
 };
 
+@displayTypes: {
+  block: block;
+  contents: contents;
+  flex: flex;
+  grid: grid;
+  inherit: inherit;
+  initial: initial;
+  inline-block: inline-block;
+  inline-flex: inline-flex;
+  inline-grid: inline-grid;
+  inline-table: inline-table;
+  inline: inline;
+  list-item: list-item;
+  none: none;
+  run-in: run-in;
+  table-caption: table-caption;
+  table-cell: table-cell;
+  table-column-group: table-column-group;
+  table-column: table-column;
+  table-footer-group: table-footer-group;
+  table-header-group: table-header-group;
+  table-row-group: table-row-group;
+  table-row: table-row;
+  table: table;
+};
+
+@listTypes: {
+  disc: disc;
+  armenian: armenian;
+  circle: circle;
+  cjk-ideographic: cjk-ideographic;
+  decimal: decimal;
+  decimal-leading-zero: decimal-leading-zero;
+  georgian: georgian;
+  hebrew: hebrew;
+  hiragana: hiragana;
+  hiragana-iroha: hiragana-iroha;
+  katakana: katakana;
+  katakana-iroha: katakana-iroha;
+  lower-alpha: lower-alpha;
+  lower-greek: lower-greek;
+  lower-latin: lower-latin;
+  lower-roman: lower-roman;
+  none: none;
+  square: square;
+  upper-alpha: upper-alpha;
+  upper-greek: upper-greek;
+  upper-latin: upper-latin;
+  upper-roman: upper-roman;
+  initial: initial;
+  inherit: inherit;
+};
+
 @font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 @font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
@@ -83,6 +136,7 @@
 @border-radius-lg: (8 / @rem);
 @border-radius-xl: (10 / @rem);
 @border-radius-pill: (50 / @rem);
+@border-radius-rounded: 50%;
 
 @theme-name-dark: dark;
 @theme-name-light: light;
@@ -97,11 +151,7 @@
 
 @border-width: (1 / @rem);
 
-@line-height-xs: 1;
-@line-height-sm: 1.25;
 @line-height-base: 1.5;
-@line-height-lg: 1.75;
-@line-height-xl: 2;
 
 @font-weight-light: 300;
 @font-weight-normal: 400;
@@ -117,32 +167,28 @@
 @input-line-height: @line-height-base;
 
 @input-font-size: @font-size-base;
-@input-padding-y: round((7.2 / @rem), 2);
-@input-padding-x: round((7.2 / @rem), 2);
+@input-padding-y: round((6.01 / @rem), 2);
+@input-padding-x: round((11.01 / @rem), 2);
 @input-border-radius: @border-radius;
 
-@input-padding-y-xs: round((5.1 / @rem), 2);
-@input-padding-x-xs: round((5.1 / @rem), 2);
+@input-padding-y-xs: round((4.52 / @rem), 2);
+@input-padding-x-xs: round((7.03 / @rem), 2);
 @input-font-size-xs: @font-size-xs;
-@input-line-height-xs: @line-height-xs;
 @input-border-radius-xs: @border-radius-xs;
 
-@input-padding-y-sm: round((6.38 / @rem), 2);
-@input-padding-x-sm: round((6.38 / @rem), 2);
+@input-padding-y-sm: round((5.38 / @rem), 2);
+@input-padding-x-sm: round((9.01 / @rem), 2);
 @input-font-size-sm: @font-size-sm;
-@input-line-height-sm: @line-height-sm;
 @input-border-radius-sm: @border-radius-sm;
 
-@input-padding-y-lg: round((8.02 / @rem), 2);
-@input-padding-x-lg: round((8.02 / @rem), 2);
+@input-padding-y-lg: round((6.65 / @rem), 2);
+@input-padding-x-lg: round((13.02 / @rem), 2);
 @input-font-size-lg: @font-size-lg;
-@input-line-height-lg: @line-height-lg;
 @input-border-radius-lg: @border-radius-lg;
 
-@input-padding-y-xl: round((9.29 / @rem), 2);
-@input-padding-x-xl: round((9.29 / @rem), 2);
+@input-padding-y-xl: round((7.52 / @rem), 2);
+@input-padding-x-xl: round((15.02 / @rem), 2);
 @input-font-size-xl: @font-size-xl;
-@input-line-height-xl: @line-height-xl;
 @input-border-radius-xl: @border-radius-xl;
 
 @input-border-width: @border-width;
@@ -159,10 +205,6 @@
 @btn-font-size-xl: @input-font-size-xl;
 
 @btn-line-height: @input-line-height;
-@btn-line-height-xs: @input-line-height-xs;
-@btn-line-height-sm: @input-line-height-sm;
-@btn-line-height-lg: @input-line-height-lg;
-@btn-line-height-xl: @input-line-height-xl;
 
 @btn-padding-x: @input-padding-x;
 @btn-padding-y: @input-padding-y;

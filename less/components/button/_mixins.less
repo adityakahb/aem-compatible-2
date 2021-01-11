@@ -7,23 +7,20 @@
   }
   &:disabled, &[aria-disabled="true"] {
     cursor: not-allowed;
-    opacity: if((@theme = @theme-name-dark), 0.5, 0.25);
+    opacity: 0.4;
     pointer-events: none;
   }
 }
 .button-variant-outline(@bg-color, @theme) {
-  // background-color: if((@theme = dark), @theme-light-backgroundcolor, @theme-dark-backgroundcolor);
   background-color: transparent;
   border: (1 / @rem) solid @bg-color;
   color: @bg-color;
   &:hover {
-    // background-color: @bg-color;
-    background-color: if((@theme = @theme-name-dark), rgba(lighten(@bg-color, 10%), 0.1), rgba(darken(@bg-color, 10%), 0.1));
-    // color: contrast(@bg-color, @theme-light-color, @theme-dark-color);
+    background-color: if((@theme = @theme-name-dark), rgba(lighten(@bg-color, 10%), 0.15), rgba(darken(@bg-color, 10%), 0.15));
   }
   &:disabled, &[aria-disabled="true"] {
     cursor: not-allowed;
-    opacity: if((@theme = @theme-name-dark), 0.5, 0.25);
+    opacity: 0.4;
     pointer-events: none;
   }
 }

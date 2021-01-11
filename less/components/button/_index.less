@@ -15,6 +15,10 @@
   user-select: none;
   vertical-align: middle;
   white-space: @btn-white-space;
+  [class^="bi-"]::before, [class*=" bi-"]::before {
+    line-height: @btn-line-height;
+    vertical-align: middle;
+  }
 }
 each(@colors, {
   .@{className-button}-@{key} {
@@ -62,6 +66,9 @@ each(@colors, {
   padding: @btn-padding-y-xl @btn-padding-x-xl;
   border-radius: @btn-border-radius-xl;
 }
-.@{className-button}-@{className-pill} {
+.@{className-button}-@{className-button-pill} {
   border-radius: @border-radius-pill !important;
+}
+.@{className-button}-@{className-button-rounded} {
+  border-radius: @border-radius-rounded !important;
 }
