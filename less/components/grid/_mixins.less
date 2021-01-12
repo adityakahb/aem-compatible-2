@@ -1,36 +1,48 @@
+.col-defaultprops {
+  padding-left: (@grid-gutter-width / 2);
+  padding-right: (@grid-gutter-width / 2);
+  position: relative;
+  width: 100%;
+}
 .make-container {
   width: 100%;
-  padding-right: @grid-gutter-width;
-  padding-left: @grid-gutter-width;
+  padding-left: (@grid-gutter-width / 2);
+  padding-right: (@grid-gutter-width / 2);
   margin-right: auto;
   margin-left: auto;
 }
 .generate-rowcols(@n, @bp-prefix, @i: 1) when (@i =< @n) {
-  .row-cols@{bp-prefix}-@{i} {
+  .@{className-grid-rowcols}@{bp-prefix}-@{i} {
     > * {
       flex: 0 0 auto;
-      width: (100% / @i);
+      width: round((100% / @i), 4);
     }
   }
   .generate-rowcols(@n, @bp-prefix, (@i + 1));
 }
+.generate-default-cols(@n, @bp-prefix, @i: 1) when (@i =< @n) {
+  .@{className-grid-col}@{bp-prefix}-@{i} {
+    &:extend(.col-defaultprops);
+  }
+  .generate-default-cols(@n, @bp-prefix, (@i + 1));
+}
 .generate-cols(@n, @bp-prefix, @i: 1) when (@i =< @n) {
-  .col@{bp-prefix}-@{i} {
+  .@{className-grid-col}@{bp-prefix}-@{i} {
     flex: 0 0 auto;
-    width: (@i * 100% / @n);
+    width: round((@i * 100% / @n), 4);
   }
   .generate-cols(@n, @bp-prefix, (@i + 1));
 }
 .loopCols(@bp-prefix) {
-  .col@{bp-prefix} {
+  .@{className-grid-col}@{bp-prefix} {
     flex: 1 0 0%;
   }
-  .row-cols@{bp-prefix}-auto > * {
+  .@{className-grid-rowcols}@{bp-prefix}-auto > * {
     flex: 0 0 auto;
     width: auto;
   }
   .generate-rowcols(@grid-row-columns, @bp-prefix);
-  .col@{bp-prefix}-auto {
+  .@{className-grid-col}@{bp-prefix}-auto {
     flex: 0 0 auto;
     width: auto;
   }
@@ -40,9 +52,11 @@
   each(@breakpoints, {
     .defineBreakpointAttributes(@index, @key, @value);
     & when (boolean(@bpkey = xs) = true) {
+      .generate-default-cols(@grid-columns, ~'');
       .loopCols(~'');
     }
     & when (boolean(@bpkey = xs) = false) {
+      .generate-default-cols(@grid-columns, ~'-@{bpkey}');
       @media (min-width: @bpvalue) {
         .loopCols(~'-@{bpkey}');
       }
