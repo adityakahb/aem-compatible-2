@@ -1,8 +1,6 @@
 export const __HeaderBreakpoint = '768';
 export const __LandscapeCSSClass = 'is-landscape';
 export const __PortraitCSSClass = 'is-portrait';
-export const __FormValidElementClass = 'is-valid';
-export const __FormInvalidElementClass = 'is-invalid';
 export const __DefaultCarouselOptions = {
   loop: true,
   navigation: {
@@ -63,12 +61,8 @@ export const __GetElementDimensions = function (elem) {
 export const __StringTrim = function (str) {
   return str.replace(/^\s+|\s+$/g, '');
 };
-export const _ArrayCall = function (arr) {
-  try {
-    return Array.prototype.slice.call(arr);
-  } catch (e) {
-    return [];
-  }
+export const __ArrayCall = function (arr) {
+  return Array.prototype.slice.call(arr);
 };
 export const __HasClass = function (element, cls) {
   if (element) {
@@ -134,36 +128,40 @@ export const __SlideUp = (target, duration=500) => {
 
 export const __SlideDown = (target, duration=500) => {
   if (target) {
-    target.style.removeProperty('display');
     let display = window.getComputedStyle(target).display;
-  
-    if (display === 'none')
-      display = 'block';
-  
-    target.style.display = display;
-    let height = target.offsetHeight;
-    target.style.overflow = 'hidden';
-    target.style.height = 0;
-    target.style.paddingTop = 0;
-    target.style.paddingBottom = 0;
-    target.style.marginTop = 0;
-    target.style.marginBottom = 0;
-    target.offsetHeight;
-    target.style.boxSizing = 'border-box';
-    target.style.transitionProperty = "height, margin, padding";
-    target.style.transitionDuration = duration + 'ms';
-    target.style.height = height + 'px';
-    target.style.removeProperty('padding-top');
-    target.style.removeProperty('padding-bottom');
-    target.style.removeProperty('margin-top');
-    target.style.removeProperty('margin-bottom');
-    window.setTimeout( () => {
-      target.style.removeProperty('height');
-      target.style.removeProperty('overflow');
-      target.style.removeProperty('transition-duration');
-      target.style.removeProperty('transition-property');
-    }, duration);
-  }
+    if (display === 'none') {
+      target.style.removeProperty('display');
+      display = window.getComputedStyle(target).display;
+    
+      if (display === 'none') {
+        display = 'block';
+      }
+    
+      target.style.display = display;
+      let height = target.offsetHeight;
+      target.style.overflow = 'hidden';
+      target.style.height = 0;
+      target.style.paddingTop = 0;
+      target.style.paddingBottom = 0;
+      target.style.marginTop = 0;
+      target.style.marginBottom = 0;
+      target.offsetHeight;
+      target.style.boxSizing = 'border-box';
+      target.style.transitionProperty = "height, margin, padding";
+      target.style.transitionDuration = duration + 'ms';
+      target.style.height = height + 'px';
+      target.style.removeProperty('padding-top');
+      target.style.removeProperty('padding-bottom');
+      target.style.removeProperty('margin-top');
+      target.style.removeProperty('margin-bottom');
+      window.setTimeout( () => {
+        target.style.removeProperty('height');
+        target.style.removeProperty('overflow');
+        target.style.removeProperty('transition-duration');
+        target.style.removeProperty('transition-property');
+      }, duration);
+    }
+    }
 };
 
 export const __SlideToggle = (target, duration = 500) => {
