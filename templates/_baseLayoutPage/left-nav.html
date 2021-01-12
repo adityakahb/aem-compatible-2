@@ -1,10 +1,18 @@
 <nav>
-  <ul class="list-style-none m-0">
+  <ul class="list-style-none m-0 p-0">
     <li>
-      <a href="#">Buttons</a>
+      <!--#if expr='$active_nav = /buttons/' -->
+        <a href="/aem-compatible-2/templates/buttons" class="active">Buttons</a>
+      <!--#else -->
+        <a href="/aem-compatible-2/templates/buttons">Buttons</a>
+      <!--#endif -->
     </li>
     <li>
-      <a href="#">Typography</a>
+      <!--#if expr='$active_nav = /typography/' -->
+      <a href="/aem-compatible-2/templates/typography" class="active">Typography</a>
+      <!--#else -->
+        <a href="/aem-compatible-2/templates/typography">Typography</a>
+      <!--#endif -->
     </li>
   </ul>
 </nav>
