@@ -17,10 +17,10 @@ module.exports = _classCallCheck;
 
 /***/ }),
 
-/***/ "./templates/typography/clientlibs/scripts/index.es.js":
-/*!*************************************************************!*\
-  !*** ./templates/typography/clientlibs/scripts/index.es.js ***!
-  \*************************************************************/
+/***/ "./templates/spinners/clientlibs/scripts/index.es.js":
+/*!***********************************************************!*\
+  !*** ./templates/spinners/clientlibs/scripts/index.es.js ***!
+  \***********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -31,13 +31,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_stable__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_stable__WEBPACK_IMPORTED_MODULE_1__);
 
 
-function cov_1fe1m2dyhh() {
-  var path = "C:\\MAMP\\htdocs\\aem-compatible-2\\templates\\typography\\clientlibs\\scripts\\index.es.js";
-  var hash = "756a93eabe794469a86cad8f0369a17438d75248";
+function cov_we7c5dvw1() {
+  var path = "C:\\MAMP\\htdocs\\aem-compatible-2\\templates\\spinners\\clientlibs\\scripts\\index.es.js";
+  var hash = "6a2bbb5cb9dd295892a0b04d3c9e501a305e37c5";
   var global = new Function("return this")();
   var gcv = "__coverage__";
   var coverageData = {
-    path: "C:\\MAMP\\htdocs\\aem-compatible-2\\templates\\typography\\clientlibs\\scripts\\index.es.js",
+    path: "C:\\MAMP\\htdocs\\aem-compatible-2\\templates\\spinners\\clientlibs\\scripts\\index.es.js",
     statementMap: {},
     fnMap: {
       "0": {
@@ -72,7 +72,7 @@ function cov_1fe1m2dyhh() {
     },
     b: {},
     _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    hash: "756a93eabe794469a86cad8f0369a17438d75248"
+    hash: "6a2bbb5cb9dd295892a0b04d3c9e501a305e37c5"
   };
   var coverage = global[gcv] || (global[gcv] = {});
 
@@ -83,20 +83,20 @@ function cov_1fe1m2dyhh() {
   var actualCoverage = coverage[path];
   {
     // @ts-ignore
-    cov_1fe1m2dyhh = function () {
+    cov_we7c5dvw1 = function () {
       return actualCoverage;
     };
   }
   return actualCoverage;
 }
 
-cov_1fe1m2dyhh();
+cov_we7c5dvw1();
 
 
 var Buttons = function Buttons() {
   _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Buttons);
 
-  cov_1fe1m2dyhh().f[0]++;
+  cov_we7c5dvw1().f[0]++;
 };
 
 /***/ }),
@@ -14696,7 +14696,7 @@ module.exports = path;
 /************************************************************************/
 /******/ 	// startup
 /******/ 	// Load entry module
-/******/ 	__webpack_require__("./templates/typography/clientlibs/scripts/index.es.js");
+/******/ 	__webpack_require__("./templates/spinners/clientlibs/scripts/index.es.js");
 /******/ 	// This entry module used 'exports' so it can't be inlined
 /******/ })()
 ;

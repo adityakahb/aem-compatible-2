@@ -1,7 +1,7 @@
 @root-font-size: 16;
 
-@rem: @root-font-size*1rem;
-@em: @root-font-size*1em;
+@rem: round(@root-font-size * 1rem, 2);
+@em: round(@root-font-size * 1em, 2);
 
 // @grays: {
 //   gray0: #fff;
@@ -175,26 +175,26 @@
 @input-line-height: @line-height-base;
 
 @input-font-size: @font-size-base;
-@input-padding-y: round((6.01 / @rem), 2);
-@input-padding-x: round((11.01 / @rem), 2);
+@input-padding-y: round((7.2 / @rem), 2);
+@input-padding-x: round((11.05 / @rem), 2);
 @input-border-radius: @border-radius;
 
-@input-padding-y-xs: round((4.52 / @rem), 2);
-@input-padding-x-xs: round((7.03 / @rem), 2);
+@input-padding-y-xs: round((5.15 / @rem), 2);
+@input-padding-x-xs: round((7.02 / @rem), 2);
 @input-font-size-xs: @font-size-xs;
 @input-border-radius-xs: @border-radius-xs;
 
-@input-padding-y-sm: round((5.38 / @rem), 2);
-@input-padding-x-sm: round((9.01 / @rem), 2);
+@input-padding-y-sm: round((6.45 / @rem), 2);
+@input-padding-x-sm: round((9.05 / @rem), 2);
 @input-font-size-sm: @font-size-sm;
 @input-border-radius-sm: @border-radius-sm;
 
-@input-padding-y-lg: round((6.65 / @rem), 2);
+@input-padding-y-lg: round((8.02 / @rem), 2);
 @input-padding-x-lg: round((13.02 / @rem), 2);
 @input-font-size-lg: @font-size-lg;
 @input-border-radius-lg: @border-radius-lg;
 
-@input-padding-y-xl: round((7.52 / @rem), 2);
+@input-padding-y-xl: round((9.3 / @rem), 2);
 @input-padding-x-xl: round((15.02 / @rem), 2);
 @input-font-size-xl: @font-size-xl;
 @input-border-radius-xl: @border-radius-xl;

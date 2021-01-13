@@ -2,7 +2,7 @@
   background-color: transparent;
   border: @btn-border-width solid transparent;
   border-radius: @btn-border-radius;
-  color: @theme-light-backgroundcolor;
+  color: @theme-light-color;
   cursor: if(@enable-button-pointers, pointer, null);
   display: inline-block;
   font-family: @btn-font-family;
@@ -16,8 +16,21 @@
   vertical-align: middle;
   white-space: @btn-white-space;
   [class^="bi-"]::before, [class*=" bi-"]::before {
-    line-height: @btn-line-height;
-    vertical-align: middle;
+    line-height: 1.2;
+    vertical-align: text-bottom;
+  }
+  .spinner {
+    &, &:after {
+      height: (16 / @rem);
+      width: (16 / @rem);
+    }
+    &:after {
+      border-width: (2 / @rem);
+      border-bottom-color: @theme-light-color;
+      border-left-color: rgba(@theme-light-color, 0.2);
+      border-right-color: rgba(@theme-light-color, 0.2);
+      border-top-color: @theme-light-color;
+    }
   }
 }
 each(@colors, {
@@ -26,45 +39,62 @@ each(@colors, {
     .button-variant(@value, light);
   }
   .@{className-button}-@{key}-outline {
-    // @{key}-@{index}: @value;
     .button-variant-outline(@value, light);
   }
 });
 [data-theme="@{theme-name-dark}"] {
   each(@colors, {
     .@{className-button}-@{key} {
-      // @{key}-@{index}: @value;
       .button-variant(@value, dark);
     }
     .@{className-button}-@{key}-outline {
-      // @{key}-@{index}: @value;
       .button-variant-outline(@value, dark);
     }
   });
 }
 .@{className-button-xs} {
-  font-size: @btn-font-size-xs;
-  // line-height: @btn-line-height-xs;
-  padding: @btn-padding-y-xs @btn-padding-x-xs;
   border-radius: @btn-border-radius-xs;
+  font-size: @btn-font-size-xs;
+  padding: @btn-padding-y-xs @btn-padding-x-xs;
+  .spinner {
+    &, &:after {
+      height: (8 / @rem);
+      width: (8 / @rem);
+    }
+  }
 }
 .@{className-button-sm} {
-  font-size: @btn-font-size-sm;
-  // line-height: @btn-line-height-sm;
-  padding: @btn-padding-y-sm @btn-padding-x-sm;
   border-radius: @btn-border-radius-sm;
+  font-size: @btn-font-size-sm;
+  padding: @btn-padding-y-sm @btn-padding-x-sm;
+  .spinner {
+    &, &:after {
+      height: (14 / @rem);
+      width: (14 / @rem);
+    }
+  }
 }
 .@{className-button-lg} {
-  font-size: @btn-font-size-lg;
-  // line-height: @btn-line-height-lg;
-  padding: @btn-padding-y-lg @btn-padding-x-lg;
   border-radius: @btn-border-radius-lg;
+  font-size: @btn-font-size-lg;
+  padding: @btn-padding-y-lg @btn-padding-x-lg;
+  .spinner {
+    &, &:after {
+      height: (22 / @rem);
+      width: (22 / @rem);
+    }
+  }
 }
 .@{className-button-xl} {
-  font-size: @btn-font-size-xl;
-  // line-height: @btn-line-height-xl;
-  padding: @btn-padding-y-xl @btn-padding-x-xl;
   border-radius: @btn-border-radius-xl;
+  font-size: @btn-font-size-xl;
+  padding: @btn-padding-y-xl @btn-padding-x-xl;
+  .spinner {
+    &, &:after {
+      height: (28 / @rem);
+      width: (28 / @rem);
+    }
+  }
 }
 .@{className-button}-@{className-button-pill} {
   border-radius: @border-radius-pill !important;
