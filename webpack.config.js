@@ -76,10 +76,6 @@ module.exports = (env, argv) => {
       ]
     },
     plugins: [
-      new webpack.ContextReplacementPlugin(
-        /moment[/\\]locale$/,
-        /en/
-      ),
       new ProgressBarPlugin(),
       new webpack.ProvidePlugin({
         Popper: ['popper.js', 'default']

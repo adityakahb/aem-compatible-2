@@ -1,18 +1,35 @@
 <nav>
   <ul class="list-style-none m-0 p-0">
     <li>
-      <!--#if expr='$active_nav = /buttons/' -->
-        <a href="/aem-compatible-2/templates/buttons" class="active">Buttons</a>
+      <!--#if expr='$active_nav = /accordion/' -->
+        <div class="bg-light text-align-left p-3">Accordion</div>
       <!--#else -->
-        <a href="/aem-compatible-2/templates/buttons">Buttons</a>
+        <a href="/aem-compatible-2/templates/accordion" class="p-3 display-block">Accordion</a>
       <!--#endif -->
     </li>
+      
+    <li>
+      <!--#if expr='$active_nav = /buttons/' -->
+        <div class="bg-light text-align-left p-3">Buttons</div>
+      <!--#else -->
+        <a href="/aem-compatible-2/templates/buttons" class="p-3 display-block">Buttons</a>
+      <!--#endif -->
+    </li>
+      
+    <li>
+      <!--#if expr='$active_nav = /spinners/' -->
+        <div class="bg-light text-align-left p-3">Spinners</div>
+      <!--#else -->
+        <a href="/aem-compatible-2/templates/spinners" class="p-3 display-block">Spinners</a>
+      <!--#endif -->
+    </li>
+      
     <li>
       <!--#if expr='$active_nav = /typography/' -->
-      <a href="/aem-compatible-2/templates/typography" class="active">Typography</a>
+        <div class="bg-light text-align-left p-3">Typography</div>
       <!--#else -->
-        <a href="/aem-compatible-2/templates/typography">Typography</a>
+        <a href="/aem-compatible-2/templates/typography" class="p-3 display-block">Typography</a>
       <!--#endif -->
     </li>
-  </ul>
-</nav>
+      </ul>
+  </nav>

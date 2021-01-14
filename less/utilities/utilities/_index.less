@@ -1,0 +1,28 @@
+.loopUtilities(@bp-prefix) {
+  each(@textAlign, {
+    .@{className-text-align}@{bp-prefix}-@{key} {
+      text-align: @value !important;
+    }
+  });
+  each(@textDecoration, {
+    .@{className-text-decoration}@{bp-prefix}-@{key} {
+      text-decoration: @value !important;
+    }
+  });
+  each(@positionTypes, {
+    .@{className-position}@{bp-prefix}-@{key} {
+      position: @value !important;
+    }
+  });
+};
+each(@breakpoints, {
+  .defineBreakpointAttributes(@index, @key, @value);
+  & when (boolean(@bpkey = xs) = true) {
+    .loopUtilities(~'');
+  }
+  & when (boolean(@bpkey = xs) = false) {
+    @media (min-width: @bpvalue) {
+      .loopUtilities(~'-@{bpkey}');
+    }
+  }
+});

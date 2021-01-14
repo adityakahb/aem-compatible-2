@@ -3,6 +3,9 @@
     .@{className-background-color}@{bp-prefix}-@{key} {
       background-color: @value !important;
     }
+    .@{className-text-color}@{bp-prefix}-@{key} {
+      color: @value !important;
+    }
   });
 };
 each(@breakpoints, {
