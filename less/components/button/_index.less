@@ -46,13 +46,15 @@ a:hover {
 a:active {
   color: @colors[primary];
 }
-
+a.@{className-button} {
+  color: @theme-light-color;
+}
 each(@colors, {
-  .@{className-button}-@{key} {
+  .@{className-button}-@{key}, a.@{className-button}-@{key} {
     // @{key}-@{index}: @value;
     .button-variant(@value, light);
   }
-  .@{className-button}-@{key}-outline {
+  .@{className-button}-@{key}-outline, a.@{className-button}-@{key}-outline {
     .button-variant-outline(@value, light);
   }
 });
@@ -70,12 +72,15 @@ each(@colors, {
   a:active {
     color: @colors[primary];
   }
+  a.@{className-button} {
+    color: @theme-light-color;
+  }
   
   each(@colors, {
-    .@{className-button}-@{key} {
+    .@{className-button}-@{key}, a.@{className-button}-@{key} {
       .button-variant(@value, dark);
     }
-    .@{className-button}-@{key}-outline {
+    .@{className-button}-@{key}-outline, a.@{className-button}-@{key}-outline {
       .button-variant-outline(@value, dark);
     }
   });
