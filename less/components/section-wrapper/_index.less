@@ -1,0 +1,36 @@
+.@{className-section-wrapper} {
+  display: flex;
+  flex-direction: column;
+  &.@{className-tall-as-device} {
+    height: ~"calc(100vh - @{header-height-mobile})";
+    position: relative;
+  }
+  &.@{className-one-n-only} {
+    &, .@{className-section-content} {
+      position: relative;
+    }
+    .@{className-section-content} {
+      min-height: 1px;
+    }
+  }
+  &.half-n-half {
+    flex-direction: column;
+    &, .@{className-half-on-left}, .@{className-half-on-right} {
+      position: relative;
+    }
+    .@{className-half-on-left}, .@{className-half-on-right} {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+    }
+    .@{className-half-content} {
+      min-height: 1px;
+    }
+  }
+  @media (min-width: @breakpoints[xl]) {
+    &.@{className-tall-as-device} {
+      height: ~"calc(100vh - @{header-height-desktop})";
+    }
+  }
+}

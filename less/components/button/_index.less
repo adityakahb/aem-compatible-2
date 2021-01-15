@@ -53,7 +53,7 @@ each(@colors, {
     // @{key}-@{index}: @value;
     .button-variant(@value, @theme-name-light);
   }
-  .@{className-button}-@{key}-outline, a.@{className-button}-@{key}-outline {
+  .@{className-button}-outline-@{key}-outline, a.@{className-button}-outline-@{key} {
     .button-variant-outline(@value, @theme-name-light);
   }
 });
@@ -79,7 +79,7 @@ each(@colors, {
     .@{className-button}-@{key}, a.@{className-button}-@{key} {
       .button-variant(@value, @theme-name-dark);
     }
-    .@{className-button}-@{key}-outline, a.@{className-button}-@{key}-outline {
+    .@{className-button}-outline-@{key}, a.@{className-button}-outline-@{key} {
       .button-variant-outline(@value, @theme-name-dark);
     }
   });
