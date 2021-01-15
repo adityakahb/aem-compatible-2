@@ -1,0 +1,21 @@
+.accordion-variant(@bg-color, @theme) {
+  .@{className-accordion-item} {
+    border-left: @accordion-border-width solid if((@theme = @theme-name-dark), lighten(@bg-color, 10%), darken(@bg-color, 10%));
+    border-right: @accordion-border-width solid if((@theme = @theme-name-dark), lighten(@bg-color, 10%), darken(@bg-color, 10%));
+    border-top: @accordion-border-width solid if((@theme = @theme-name-dark), lighten(@bg-color, 10%), darken(@bg-color, 10%));
+    border-bottom: @accordion-border-width solid if((@theme = @theme-name-dark), lighten(@bg-color, 10%), darken(@bg-color, 10%));
+    &:not(:last-of-type) {
+      border-bottom: 0;
+    }
+  }
+  .@{className-accordion-link} {
+    background-color: @bg-color;
+    color: contrast(@bg-color, @theme-light-color, @theme-dark-color);
+    &:hover {
+      background-color: if((@theme = @theme-name-dark), lighten(@bg-color, 10%), darken(@bg-color, 10%));
+    }
+  }
+  .@{className-accordion-content} {
+    border-top: @accordion-border-width solid if((@theme = @theme-name-dark), lighten(@bg-color, 10%), darken(@bg-color, 10%));
+  }
+}

@@ -51,10 +51,10 @@ a.@{className-button} {
 each(@colors, {
   .@{className-button}-@{key}, a.@{className-button}-@{key} {
     // @{key}-@{index}: @value;
-    .button-variant(@value, light);
+    .button-variant(@value, @theme-name-light);
   }
   .@{className-button}-@{key}-outline, a.@{className-button}-@{key}-outline {
-    .button-variant-outline(@value, light);
+    .button-variant-outline(@value, @theme-name-light);
   }
 });
 [data-theme="@{theme-name-dark}"] {
@@ -77,10 +77,10 @@ each(@colors, {
   
   each(@colors, {
     .@{className-button}-@{key}, a.@{className-button}-@{key} {
-      .button-variant(@value, dark);
+      .button-variant(@value, @theme-name-dark);
     }
     .@{className-button}-@{key}-outline, a.@{className-button}-@{key}-outline {
-      .button-variant-outline(@value, dark);
+      .button-variant-outline(@value, @theme-name-dark);
     }
   });
 }

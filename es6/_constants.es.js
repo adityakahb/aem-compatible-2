@@ -1,3 +1,4 @@
+export const __ActiveClass = 'active';
 export const __HeaderBreakpoint = '768';
 export const __LandscapeCSSClass = 'is-landscape';
 export const __PortraitCSSClass = 'is-portrait';
@@ -99,7 +100,7 @@ export const __RemoveClass = function (element, cls) {
     element.className = __StringTrim(curclass.join(' '));
   }
 };
-export const __SlideUp = (target, duration=500) => {
+export const __SlideUp = (target, duration=250) => {
   if (target) {
     target.style.transitionProperty = 'height, margin, padding';
     target.style.transitionDuration = duration + 'ms';
@@ -126,7 +127,7 @@ export const __SlideUp = (target, duration=500) => {
   }
 };
 
-export const __SlideDown = (target, duration=500) => {
+export const __SlideDown = (target, duration=250) => {
   if (target) {
     let display = window.getComputedStyle(target).display;
     if (display === 'none') {
@@ -164,12 +165,12 @@ export const __SlideDown = (target, duration=500) => {
     }
 };
 
-export const __SlideToggle = (target, duration = 500) => {
+export const __SlideToggle = (target, duration = 250) => {
   if (target) {
     if (window.getComputedStyle(target).display === 'none') {
-      return slideDown(target, duration);
+      return __SlideDown(target, duration);
     } else {
-      return slideUp(target, duration);
+      return __SlideUp(target, duration);
     }
   }
 };
