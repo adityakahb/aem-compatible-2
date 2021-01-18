@@ -167,13 +167,24 @@
 @font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 @font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
-@border-radius-xs: (2 / @rem);
-@border-radius-sm: (4 / @rem);
-@border-radius: (6 / @rem);
-@border-radius-lg: (8 / @rem);
-@border-radius-xl: (10 / @rem);
-@border-radius-pill: (50 / @rem);
-@border-radius-rounded: 50%;
+@border-radius: {
+  xs: (2 / @rem);
+  sm: (4 / @rem);
+  md: (6 / @rem);
+  lg: (8 / @rem);
+  xl: (10 / @rem);
+  pill: (50 / @rem);
+  circle: 50%;
+};
+
+@heights-widths: {
+  auto: auto;
+  0: 0;
+  25: 25%;
+  50: 50%;
+  75: 75%;
+  100: 100%;
+};
 
 @theme-name-dark: dark;
 @theme-name-light: light;
@@ -206,27 +217,27 @@
 @input-font-size: @font-size-base;
 @input-padding-y: round((7.2 / @rem), 2);
 @input-padding-x: round((11.05 / @rem), 2);
-@input-border-radius: @border-radius;
+@input-border-radius: @border-radius[md];
 
 @input-padding-y-xs: round((5.15 / @rem), 2);
 @input-padding-x-xs: round((7.02 / @rem), 2);
 @input-font-size-xs: @font-size-xs;
-@input-border-radius-xs: @border-radius-xs;
+@input-border-radius-xs: @border-radius[xs];
 
 @input-padding-y-sm: round((6.45 / @rem), 2);
 @input-padding-x-sm: round((9.05 / @rem), 2);
 @input-font-size-sm: @font-size-sm;
-@input-border-radius-sm: @border-radius-sm;
+@input-border-radius-sm: @border-radius[sm];
 
 @input-padding-y-lg: round((8.02 / @rem), 2);
 @input-padding-x-lg: round((13.02 / @rem), 2);
 @input-font-size-lg: @font-size-lg;
-@input-border-radius-lg: @border-radius-lg;
+@input-border-radius-lg: @border-radius[lg];
 
 @input-padding-y-xl: round((9.3 / @rem), 2);
 @input-padding-x-xl: round((15.02 / @rem), 2);
 @input-font-size-xl: @font-size-xl;
-@input-border-radius-xl: @border-radius-xl;
+@input-border-radius-xl: @border-radius[xl];
 
 @input-border-width: @border-width;
 

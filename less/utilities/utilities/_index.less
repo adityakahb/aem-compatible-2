@@ -1,12 +1,3 @@
-.generate-heights-widths(@n, @bp-prefix, @i: 1) when (@i =< @n) {
-  .@{className-heights}@{bp-prefix}-@{i} {
-    height: round((100% / @i), 2) !important;
-  }
-  .@{className-widths}@{bp-prefix}-@{i} {
-    width: round((100% / @i), 2) !important;
-  }
-  .generate-heights-widths(@n, @bp-prefix, (@i + 1));
-}
 .loopUtilities(@bp-prefix) {
   each(@textAlign, {
     .@{className-text-align}@{bp-prefix}-@{key} {
@@ -23,13 +14,19 @@
       position: @value !important;
     }
   });
-  .@{className-heights}-auto {
-    height: auto !important;
-  }
-  .@{className-widths}-auto {
-    width: auto !important;
-  }
-  .generate-heights-widths(@grid-columns, @bp-prefix);
+  each(@heights-widths, {
+    .@{className-height}@{bp-prefix}-@{key} {
+      height: @value !important;
+    }
+    .@{className-width}@{bp-prefix}-@{key} {
+      width: @value !important;
+    }
+  });
+  each(@listTypes, {
+    .@{className-list-style}@{bp-prefix}-@{key} {
+      list-style-type: @value !important;
+    }
+  });
 };
 each(@breakpoints, {
   .defineBreakpointAttributes(@index, @key, @value);
