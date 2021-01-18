@@ -3,7 +3,7 @@
   border: (1 / @rem) solid @bg-color;
   color: contrast(@bg-color, @theme-light-color, @theme-dark-color);
   &:hover {
-    background-color: if((@theme = @theme-name-dark), lighten(@bg-color, 10%), darken(@bg-color, 10%));
+    background-color: if((@theme = @theme-name-dark), lighten(@bg-color, @color-hover-saturation), darken(@bg-color, @color-hover-saturation));
   }
   &:disabled, &[aria-disabled="true"] {
     cursor: not-allowed;
@@ -24,7 +24,7 @@
   border: (1 / @rem) solid @bg-color;
   color: @bg-color;
   &:hover {
-    background-color: if((@theme = @theme-name-dark), rgba(lighten(@bg-color, 10%), 0.15), rgba(darken(@bg-color, 10%), 0.15));
+    background-color: if((@theme = @theme-name-dark), rgba(lighten(@bg-color, @color-hover-saturation), 0.15), rgba(darken(@bg-color, @color-hover-saturation), 0.15));
   }
   &:disabled, &[aria-disabled="true"] {
     cursor: not-allowed;

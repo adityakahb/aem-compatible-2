@@ -40,7 +40,7 @@ a:visited {
   color: @colors[primary];
 }
 a:hover {
-  color: darken(@colors[primary], 10%);
+  color: darken(@colors[primary], @color-hover-saturation);
 }
 a:active {
   color: @colors[primary];
@@ -53,7 +53,7 @@ each(@colors, {
     // @{key}-@{index}: @value;
     .button-variant(@value, @theme-name-light);
   }
-  .@{className-button}-outline-@{key}, a.@{className-button}-outline-@{key} {
+  .@{className-button}-@{key}-outline, a.@{className-button}-@{key}-outline {
     .button-variant-outline(@value, @theme-name-light);
   }
 });
@@ -66,7 +66,7 @@ each(@colors, {
     color: @colors[primary];
   }
   a:hover {
-    color: lighten(@colors[primary], 10%);
+    color: lighten(@colors[primary], @color-hover-saturation);
   }
   a:active {
     color: @colors[primary];
@@ -79,7 +79,7 @@ each(@colors, {
     .@{className-button}-@{key}, a.@{className-button}-@{key} {
       .button-variant(@value, @theme-name-dark);
     }
-    .@{className-button}-outline-@{key}, a.@{className-button}-outline-@{key} {
+    .@{className-button}-@{key}-outline, a.@{className-button}-@{key}-outline {
       .button-variant-outline(@value, @theme-name-dark);
     }
   });

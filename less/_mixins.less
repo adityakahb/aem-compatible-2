@@ -3,3 +3,70 @@
   @bpkey: ~'@{key}';
   @bpvalue: ~'@{value}';
 }
+.top-left() {
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translate(0, 0);
+}
+.top-center() {
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, 0);
+}
+.top-right() {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(0, 0);
+}
+.center-left() {
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.center-center() {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.center-right() {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.bottom-left() {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  transform: translate(0, 0);
+}
+.bottom-center() {
+  bottom: 0;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+}
+.bottom-right() {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  transform: translate(0, 0);
+}
+
+
+.word-wrap() {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}

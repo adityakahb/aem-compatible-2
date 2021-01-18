@@ -1,3 +1,1 @@
-export default class GlobalScripts {
-  constructor() {}
-}
+import FooterScripts from './../../../../es6/_footer-scripts.es';

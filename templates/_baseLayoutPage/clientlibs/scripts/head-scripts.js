@@ -43,16 +43,16 @@ module.exports = _createClass;
 
 /***/ }),
 
-/***/ "./templates/_baseLayoutPage/clientlibs/scripts/head-scripts.es.js":
-/*!*************************************************************************!*\
-  !*** ./templates/_baseLayoutPage/clientlibs/scripts/head-scripts.es.js ***!
-  \*************************************************************************/
+/***/ "./es6/_header-scripts.es.js":
+/*!***********************************!*\
+  !*** ./es6/_header-scripts.es.js ***!
+  \***********************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ HeadScripts; }
+/* harmony export */   "default": function() { return /* binding */ HeaderScripts; }
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
@@ -65,13 +65,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function cov_yg73fd8mf() {
-  var path = "C:\\MAMP\\htdocs\\aem-compatible-2\\templates\\_baseLayoutPage\\clientlibs\\scripts\\head-scripts.es.js";
-  var hash = "dea49bf4493886d8297be7a7dee2d15a660e980e";
+function cov_tmi0dqrlh() {
+  var path = "C:\\MAMP\\htdocs\\aem-compatible-2\\es6\\_header-scripts.es.js";
+  var hash = "46f680750cad09f7b2d94a62b48c504b2564746f";
   var global = new Function("return this")();
   var gcv = "__coverage__";
   var coverageData = {
-    path: "C:\\MAMP\\htdocs\\aem-compatible-2\\templates\\_baseLayoutPage\\clientlibs\\scripts\\head-scripts.es.js",
+    path: "C:\\MAMP\\htdocs\\aem-compatible-2\\es6\\_header-scripts.es.js",
     statementMap: {
       "0": {
         start: {
@@ -110,7 +110,7 @@ function cov_yg73fd8mf() {
         },
         end: {
           line: 15,
-          column: 36
+          column: 38
         }
       },
       "4": {
@@ -249,7 +249,90 @@ function cov_yg73fd8mf() {
       "0": [0, 0]
     },
     _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    hash: "dea49bf4493886d8297be7a7dee2d15a660e980e"
+    hash: "46f680750cad09f7b2d94a62b48c504b2564746f"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_tmi0dqrlh = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+
+cov_tmi0dqrlh();
+
+
+
+var HeaderScripts = /*#__PURE__*/function () {
+  function HeaderScripts() {
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, HeaderScripts);
+
+    cov_tmi0dqrlh().f[0]++;
+  }
+
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(HeaderScripts, [{
+    key: "__init",
+    value: function __init() {
+      cov_tmi0dqrlh().f[1]++;
+      cov_tmi0dqrlh().s[0]++;
+
+      if (typeof (picturefill__WEBPACK_IMPORTED_MODULE_3___default()) === "function") {
+        cov_tmi0dqrlh().b[0][0]++;
+        cov_tmi0dqrlh().s[1]++;
+        picturefill__WEBPACK_IMPORTED_MODULE_3___default()();
+      } else {
+        cov_tmi0dqrlh().b[0][1]++;
+      }
+    }
+  }]);
+
+  return HeaderScripts;
+}();
+
+
+cov_tmi0dqrlh().s[2]++;
+document.addEventListener('DOMContentLoaded', function () {
+  cov_tmi0dqrlh().f[2]++;
+  var hscripts = (cov_tmi0dqrlh().s[3]++, new HeaderScripts());
+  cov_tmi0dqrlh().s[4]++;
+
+  hscripts.__init();
+});
+
+/***/ }),
+
+/***/ "./templates/_baseLayoutPage/clientlibs/scripts/head-scripts.es.js":
+/*!*************************************************************************!*\
+  !*** ./templates/_baseLayoutPage/clientlibs/scripts/head-scripts.es.js ***!
+  \*************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _es6_header_scripts_es__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../../../es6/_header-scripts.es */ "./es6/_header-scripts.es.js");
+function cov_yg73fd8mf() {
+  var path = "C:\\MAMP\\htdocs\\aem-compatible-2\\templates\\_baseLayoutPage\\clientlibs\\scripts\\head-scripts.es.js";
+  var hash = "866a767d1d2c66cf8418d63afdc1483cbf5248f4";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "C:\\MAMP\\htdocs\\aem-compatible-2\\templates\\_baseLayoutPage\\clientlibs\\scripts\\head-scripts.es.js",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "866a767d1d2c66cf8418d63afdc1483cbf5248f4"
   };
   var coverage = global[gcv] || (global[gcv] = {});
 
@@ -269,43 +352,6 @@ function cov_yg73fd8mf() {
 
 cov_yg73fd8mf();
 
-
-
-var HeadScripts = /*#__PURE__*/function () {
-  function HeadScripts() {
-    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, HeadScripts);
-
-    cov_yg73fd8mf().f[0]++;
-  }
-
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(HeadScripts, [{
-    key: "__init",
-    value: function __init() {
-      cov_yg73fd8mf().f[1]++;
-      cov_yg73fd8mf().s[0]++;
-
-      if (typeof (picturefill__WEBPACK_IMPORTED_MODULE_3___default()) === "function") {
-        cov_yg73fd8mf().b[0][0]++;
-        cov_yg73fd8mf().s[1]++;
-        picturefill__WEBPACK_IMPORTED_MODULE_3___default()();
-      } else {
-        cov_yg73fd8mf().b[0][1]++;
-      }
-    }
-  }]);
-
-  return HeadScripts;
-}();
-
-
-cov_yg73fd8mf().s[2]++;
-document.addEventListener('DOMContentLoaded', function () {
-  cov_yg73fd8mf().f[2]++;
-  var hscripts = (cov_yg73fd8mf().s[3]++, new HeadScripts());
-  cov_yg73fd8mf().s[4]++;
-
-  hscripts.__init();
-});
 
 /***/ }),
 

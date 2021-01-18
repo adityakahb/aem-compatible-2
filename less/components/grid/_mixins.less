@@ -51,9 +51,9 @@
 .make-grid-columns {
   each(@breakpoints, {
     .defineBreakpointAttributes(@index, @key, @value);
-    .col {
-      &:extend(.col-defaultprops);
-    }
+    // .col {
+    //   &:extend(.col-defaultprops);
+    // }
     & when (boolean(@bpkey = xs) = true) {
       .generate-default-cols(@grid-columns, ~'');
       .loopCols(~'');

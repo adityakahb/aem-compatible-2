@@ -1,3 +1,12 @@
+.generate-heights-widths(@n, @bp-prefix, @i: 1) when (@i =< @n) {
+  .@{className-heights}@{bp-prefix}-@{i} {
+    height: round((100% / @i), 2) !important;
+  }
+  .@{className-widths}@{bp-prefix}-@{i} {
+    width: round((100% / @i), 2) !important;
+  }
+  .generate-heights-widths(@n, @bp-prefix, (@i + 1));
+}
 .loopUtilities(@bp-prefix) {
   each(@textAlign, {
     .@{className-text-align}@{bp-prefix}-@{key} {
@@ -14,6 +23,13 @@
       position: @value !important;
     }
   });
+  .@{className-heights}-auto {
+    height: auto !important;
+  }
+  .@{className-widths}-auto {
+    width: auto !important;
+  }
+  .generate-heights-widths(@grid-columns, @bp-prefix);
 };
 each(@breakpoints, {
   .defineBreakpointAttributes(@index, @key, @value);
@@ -26,3 +42,31 @@ each(@breakpoints, {
     }
   }
 });
+.embedded {
+  background-color: @grays[gray00];
+  display: block;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  &.embedded-16x9 {
+    &:before {
+      content: '';
+      display: block;
+      padding-bottom: 56.25%;
+    }
+  }
+  &.embedded-4x3 {
+    &:before {
+      content: '';
+      display: block;
+      padding-bottom: 75%;
+    }
+  }
+  .embedded-item, iframe, embed, object, video {
+    .center-center();
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}

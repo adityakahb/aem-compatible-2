@@ -1,10 +1,10 @@
 .@{className-accordion} {
   .@{className-accordion-item} {
-    border-bottom: @accordion-border-width solid darken(@grays[gray14], 10%);
-    border-left: @accordion-border-width solid darken(@grays[gray14], 10%);
+    border-bottom: @accordion-border-width solid darken(@grays[gray14], @color-hover-saturation);
+    border-left: @accordion-border-width solid darken(@grays[gray14], @color-hover-saturation);
     border-radius: @accordion-border-radius;
-    border-right: @accordion-border-width solid darken(@grays[gray14], 10%);
-    border-top: @accordion-border-width solid darken(@grays[gray14], 10%);
+    border-right: @accordion-border-width solid darken(@grays[gray14], @color-hover-saturation);
+    border-top: @accordion-border-width solid darken(@grays[gray14], @color-hover-saturation);
     &:not(:last-of-type) {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
@@ -20,6 +20,18 @@
       .@{className-accordion-link} {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
+      }
+    }
+    &:last-of-type {
+      .@{className-accordion-link} {
+        border-bottom-left-radius: @accordion-border-radius;
+        border-bottom-right-radius: @accordion-border-radius;
+      }
+      &.@{className-item-active} {
+        .@{className-accordion-link} {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
       }
     }
     &[aria-disabled="true"] {
@@ -44,12 +56,12 @@
     user-select: none;
     width: 100%;
     &:hover {
-      background-color: lighten(@grays[gray14], 10%);
+      background-color: lighten(@grays[gray14], @color-hover-saturation);
     }
   }
   .@{className-accordion-content} {
     border-radius: 0 0 @accordion-border-radius @accordion-border-radius;
-    border-top: @accordion-border-width solid darken(@grays[gray14], 10%);
+    border-top: @accordion-border-width solid darken(@grays[gray14], @color-hover-saturation);
     display: none;
     line-height: @accordion-item-line-height;
     padding: @btn-padding-y @btn-padding-x;
@@ -63,20 +75,20 @@ each(@colors, {
 [data-theme="@{theme-name-dark}"] {
   .@{className-accordion} {
     .@{className-accordion-item} {
-      border-left: @accordion-border-width solid lighten(@grays[gray02], 10%);
-      border-right: @accordion-border-width solid lighten(@grays[gray02], 10%);
-      border-top: @accordion-border-width solid lighten(@grays[gray02], 10%);
-      border-bottom: @accordion-border-width solid lighten(@grays[gray02], 10%);
+      border-left: @accordion-border-width solid lighten(@grays[gray02], @color-hover-saturation);
+      border-right: @accordion-border-width solid lighten(@grays[gray02], @color-hover-saturation);
+      border-top: @accordion-border-width solid lighten(@grays[gray02], @color-hover-saturation);
+      border-bottom: @accordion-border-width solid lighten(@grays[gray02], @color-hover-saturation);
     }
     .@{className-accordion-link} {
       background-color: @grays[gray02];
       color: @theme-dark-color;
       &:hover {
-        background-color: lighten(@grays[gray02], 10%);
+        background-color: lighten(@grays[gray02], @color-hover-saturation);
       }
     }
     .@{className-accordion-content} {
-      border-top: @accordion-border-width solid lighten(@grays[gray02], 10%);
+      border-top: @accordion-border-width solid lighten(@grays[gray02], @color-hover-saturation);
     }
   }
   each(@colors, {
